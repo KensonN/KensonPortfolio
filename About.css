@@ -1,4 +1,6 @@
-
+body {
+	cursor: url('cursor.cur'), default;
+}
 
 #navbar {
     font-size: 0px;
