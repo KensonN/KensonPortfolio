@@ -132,7 +132,20 @@ footer {
     -webkit-filter: brightness(100%);
     transition-duration: 1s;
     animation-fill-mode: forwards;
-    
+}
+
+#aboutimg{
+    -webkit-filter: brightness(50%);
+    transition-duration: 1s;
+    display: inline-block;
+    white-space: normal;
+    padding: 5px;
+}
+
+#aboutimg:hover {
+    -webkit-filter: brightness(100%);
+    transition-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 #sm img {
