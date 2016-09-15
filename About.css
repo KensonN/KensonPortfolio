@@ -1,0 +1,157 @@
+
+
+#navbar {
+    font-size: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px; 
+    padding-bottom: 0px;
+}
+
+#navbar > li {
+    width: 14%;
+    border-radius:10px;
+    display:inline-block; 
+    font-size: 0px;
+}
+
+#text {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: -40px;
+    padding-right: 20px;
+    padding-left:20px;
+    padding-bottom: 20px;
+    border-radius: 40px;
+}
+
+#socialmedia {
+    font-size: 24px;
+    text-align: right;
+}
+
+#navbar a:link {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#navbar a:hover {
+    background-color: white;
+    border-radius:30px;
+    color: black;
+}
+
+#navbar a:hover:visited{
+    color: black;
+}
+
+#navbar a:visited{
+    color: white;
+}
+
+#navbar a:hover {
+    background-color:white;
+}
+
+#wip {
+      background-image: url("http://www.habitatnewburgh.org/wp-content/uploads/2016/01/Under-Construction1.jpg");
+      background-size: cover;
+}
+
+#landscape {
+    background-image: url(https://lonelyplanetimages.imgix.net/a/g/hi/t/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco.jpg?sharp=10&vib=20&w=1200);
+    background-size: cover;
+    color: white;
+    font-family: roboto;
+    font-size: 30px;
+    padding-bottom: 10px
+} 
+
+.wipbutton{
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: monospace;
+	font-weight: bold;
+	font-size:30px;
+	padding:20px 47px;
+	text-decoration:none;
+	border-radius: 40px;
+	
+}
+
+.wipbutton:hover {
+	background-color:#5cbf2a;
+}
+
+.wipbutton:active {
+    position:relative;
+    top: 1px;
+}
+
+
+#Caption{
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 100px;
+    margin-bottom: -50px;
+    font-family: monospace;
+}
+
+h2{
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: monospace;
+}
+
+footer {
+    width: 100%;
+    bottom:0 ;
+    position: relative;
+        }
+        
+
+#spin{
+    
+}
+
+#spin:hover{}
+
+#Piano{
+    -webkit-filter: brightness(0%);
+    transition-duration: 1s;
+    display: inline-block;
+    white-space: normal;
+    padding: 5px;
+}
+
+#Piano:hover {
+    -webkit-filter: brightness(100%);
+    transition-duration: 1s;
+    animation-fill-mode: forwards;
+    
+}
+
+#sm img {
+    -webkit-filter: brightness(50%);
+    transition-duration: 0.5s;
+}
+
+#sm img:hover {
+    -webkit-filter: brightness(100%);
+    transition-duration:0.5s;
+}
+
+p{
+    margin: 0px;
+}
+
