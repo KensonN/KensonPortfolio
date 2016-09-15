@@ -1,7 +1,8 @@
-body {
-	cursor: url('cursor.cur'), default;
-}
 
+/*body {
+	cursor: url('cursor.cur'), auto;
+}
+*/
 #navbar {
     font-size: 0px;
     background-color: rgba(0, 0, 0, 0.5);
