@@ -107,14 +107,17 @@
 
 h1 {
     font-size: 100px;
-    margin-bottom: -50px;
+    margin-bottom: 0px;
     font-family: monospace;
+    text-decoration: underline;
+    
 }
 
-h2{
-    font-size: 70px;
+#text h2{
+    font-size: 60px;
     margin-bottom: 20px;
     font-family: monospace;
+    border-bottom: 5px solid white;
 }
 
 footer {
