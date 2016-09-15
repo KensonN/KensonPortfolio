@@ -3,36 +3,36 @@
 	cursor: url('cursor.cur'), auto;
 }
 */
-#navbar {
+.navbar {
     font-size: 0px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px; 
     padding-bottom: 0px;
 }
 
-#navbar > li {
+.navbar > li {
     width: 14%;
     border-radius:10px;
     display:inline-block; 
     font-size: 0px;
 }
 
-#text {
+.text {
     font-size: 30px;
     background-color: rgba(0,0,0, 0.5);
     margin-top: -40px;
     padding-right: 20px;
     padding-left:20px;
     padding-bottom: 20px;
-    border-radius: 40px;
+    border-radius: 50px;
 }
 
-#socialmedia {
+.socialmedia {
     font-size: 24px;
     text-align: right;
 }
 
-#navbar a:link {
+.navbar a:link {
     text-decoration: none;
     color: white;
     font-family: sans-serif;
@@ -42,37 +42,37 @@
     padding-right: 50px;
 }
 
-#navbar a:hover {
+.navbar a:hover {
     background-color: white;
     border-radius:30px;
     color: black;
 }
 
-#navbar a:hover:visited{
+.navbar a:hover:visited{
     color: black;
 }
 
-#navbar a:visited{
+.navbar a:visited{
     color: white;
 }
 
-#navbar a:hover {
+.navbar a:hover {
     background-color:white;
 }
 
-#wip {
+.wip {
       background-image: url("http://www.habitatnewburgh.org/wp-content/uploads/2016/01/Under-Construction1.jpg");
       background-size: cover;
 }
 
-#landscape {
-    -webkit-filter: blur(0px);
-    background-image: url(https://lonelyplanetimages.imgix.net/a/g/hi/t/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco.jpg?sharp=10&vib=20&w=1200);
-    background-size: cover;
+.layout {
     color: white;
     font-family: roboto;
     font-size: 30px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    background-image: url(https://lonelyplanetimages.imgix.net/a/g/hi/t/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco.jpg?sharp=10&vib=20&w=1200);
+    background-size:cover;
+   
 } 
 
 .wipbutton{
@@ -81,7 +81,7 @@
 	-webkit-border-radius:28px;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color: #ffffff;
 	font-family: monospace;
 	font-weight: bold;
 	font-size:30px;
@@ -101,7 +101,7 @@
 }
 
 
-#Caption{
+.Caption{
     font-size: 20px;
 }
 
@@ -113,7 +113,7 @@ h1 {
     
 }
 
-#text h2{
+.text h2{
     font-size: 60px;
     margin-bottom: 20px;
     font-family: monospace;
@@ -126,7 +126,7 @@ footer {
     position: relative;
         }
         
-#Piano{
+.Piano{
     -webkit-filter: brightness(0%);
     transition-duration: 1s;
     display: inline-block;
@@ -134,13 +134,13 @@ footer {
     padding: 5px;
 }
 
-#Piano:hover {
+.Piano:hover {
     -webkit-filter: brightness(100%);
     transition-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-#aboutimg{
+.scoutlogo{
     -webkit-filter: brightness(50%);
     transition-duration: 1s;
     display: inline-block;
@@ -148,23 +148,35 @@ footer {
     padding: 5px;
 }
 
-#aboutimg:hover {
+.scoutlogo:hover {
     -webkit-filter: brightness(100%);
     transition-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-#sm img {
+.csgo{
+    -webkit-filter: brightness(20%);
+    transition-duration: 1s;
+    display: inline-block;
+    white-space: normal;
+    padding: 5px;
+}
+
+.csgo:hover {
+    -webkit-filter: brightness(100%);
+    transition-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.sm img {
     -webkit-filter: brightness(50%);
     transition-duration: 0.5s;
 }
 
-#sm img:hover {
+.sm img:hover {
     -webkit-filter: brightness(100%);
     transition-duration:0.5s;
 }
 
-p{
-    margin: 0px;
-}
+
 
