@@ -47,18 +47,23 @@ body {
     background-color: white;
     border-radius:30px;
     color: black;
+    cursor: url('Cursors/v2.cur'), auto;
+
 }
 
 .navbar a:hover:visited{
     color: black;
+    cursor: url('Cursors/v2.cur'), auto;
 }
 
 .navbar a:visited{
     color: white;
+    cursor: url('Cursors/v2.cur'), auto;
 }
 
 .navbar a:hover {
     background-color:white;
+    cursor: url('Cursors/v2.cur'), auto;
 }
 
 .wip {
