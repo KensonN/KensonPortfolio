@@ -61,11 +61,6 @@ body {
     cursor: url('Cursors/v2.cur'), auto;
 }
 
-.navbar a:hover {
-    background-color:white;
-    cursor: url('Cursors/v2.cur'), auto;
-}
-
 .wip {
       background-image: url("http://www.habitatnewburgh.org/wp-content/uploads/2016/01/Under-Construction1.jpg");
       background-size: cover;
