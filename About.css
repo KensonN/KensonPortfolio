@@ -166,11 +166,14 @@ h1 {
 .sm img {
     -webkit-filter: brightness(50%);
     transition-duration: 0.5s;
+    cursor: url('Cursors/v2.cur'), auto;
 }
 
 .sm img:hover {
     -webkit-filter: brightness(100%);
     transition-duration:0.5s;
+    cursor: url('Cursors/v2.cur'), auto;
+
 }
 
 
