@@ -11,10 +11,11 @@
 }
 
 .navbar > li {
-    width: 14%;
+    width: 13%;
     border-radius:10px;
     display:inline-block; 
     font-size: 0px;
+    text-align: center
 }
 
 .text {
