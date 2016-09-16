@@ -1,7 +1,7 @@
 
-body {
+/*body {
 	cursor: url('Cursors/v2.cur'), auto;
-}
+}*/
 
 .navbar {
     font-size: 0px;
@@ -47,18 +47,18 @@ body {
     background-color: white;
     border-radius:30px;
     color: black;
-    cursor: url('Cursors/v2.cur'), auto;
+    /*cursor: url('Cursors/v2.cur'), auto;*/
 
 }
 
 .navbar a:hover:visited{
     color: black;
-    cursor: url('Cursors/v2.cur'), auto;
+    /*cursor: url('Cursors/v2.cur'), auto;*/
 }
 
 .navbar a:visited{
     color: white;
-    cursor: url('Cursors/v2.cur'), auto;
+    /*cursor: url('Cursors/v2.cur'), auto;*/
 }
 
 .wip {
@@ -76,7 +76,7 @@ body {
    
 } 
 
-.wipbutton{
+/*.wipbutton{
 	background-color:#44c767;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
@@ -90,7 +90,7 @@ body {
 	text-decoration:none;
 	border-radius: 40px;
 	
-}
+}*/
 
 .wipbutton:hover {
 	background-color:#5cbf2a;
@@ -166,13 +166,13 @@ h1 {
 .sm img {
     -webkit-filter: brightness(50%);
     transition-duration: 0.5s;
-    cursor: url('Cursors/v2.cur'), auto;
+    /*cursor: url('Cursors/v2.cur'), auto;*/
 }
 
 .sm img:hover {
     -webkit-filter: brightness(100%);
     transition-duration:0.5s;
-    cursor: url('Cursors/v2.cur'), auto;
+    /*cursor: url('Cursors/v2.cur'), auto;*/
 
 }
 
