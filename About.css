@@ -35,7 +35,7 @@
 .navbar a:link {
     text-decoration: none;
     color: white;
-    font-family: sans-serif;
+    font-family: monospace;
     font-weight: bold;
     font-size: 20px;
     padding-left: 50px;
