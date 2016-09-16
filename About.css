@@ -121,12 +121,6 @@ h1 {
     border-bottom: 5px solid white;
 }
 
-footer {
-    width: 100%;
-    bottom:0 ;
-    position: relative;
-        }
-        
 .Piano{
     -webkit-filter: brightness(0%);
     transition-duration: 1s;
