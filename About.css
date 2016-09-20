@@ -3,6 +3,10 @@
 	cursor: url('Cursors/v2.cur'), auto;
 }*/
 
+ul {
+    white-space: nowrap;
+}
+
 .navbar {
     font-size: 0px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -11,12 +15,13 @@
 }
 
 .navbar > li {
-    width: 13%;
     border-radius:10px;
-    display:inline-block; 
-    font-size: 0px;
+    display:inline; 
+    font-size: 12px;
     text-align: center;
 }
+
+
 
 .text {
     font-size: 30px;
@@ -28,7 +33,7 @@
     border-radius: 50px;
 }
 
-.text  > p{
+.text > p{
     display: inline-block;
 }
 
@@ -38,13 +43,13 @@
 }
 
 .navbar a:link {
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-family: monospace;
     font-weight: bold;
-    font-size: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    font-size: 25px;
+    padding: 0px 25px
 }
 
 .navbar a:hover {
