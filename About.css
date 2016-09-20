@@ -28,6 +28,10 @@
     border-radius: 50px;
 }
 
+.text  > p{
+    display: inline-block;
+}
+
 .socialmedia {
     font-size: 24px;
     text-align: right;
@@ -178,8 +182,10 @@ h1 {
 
 .hardware {
     background-image: url("VectorPhone.jpg");
-     background-color: rgba(0,0,0, 0.5) ;
-     background-size: cover;
+    color: white;
+    font-family: roboto;
+    font-size: 30px;
+    padding-bottom: 10px;
 
 }
 
@@ -196,7 +202,6 @@ h1 {
     text-align: center;
     position: relative;
     top: 50%;
-    bottom: 50%;
 }
 
 .HistoryButton {
