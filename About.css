@@ -15,17 +15,18 @@ ul {
 }
 
 .navbar > li {
+    width: 12%;
     border-radius:10px;
-    display:inline; 
     font-size: 12px;
     text-align: center;
+    display: inline-block;
 }
 
 
 
 .text {
     font-size: 30px;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0,0,0, 0.8);
     margin-top: -40px;
     padding-right: 20px;
     padding-left:20px;
@@ -70,20 +71,25 @@ ul {
     /*cursor: url('Cursors/v2.cur'), auto;*/
 }
 
-.wip {
-      background-image: url("http://www.habitatnewburgh.org/wp-content/uploads/2016/01/Under-Construction1.jpg");
-      background-size: cover;
-}
-
 .layout {
     color: white;
     font-family: roboto;
     font-size: 30px;
     padding-bottom: 10px;
-    background-image: url(https://lonelyplanetimages.imgix.net/a/g/hi/t/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco.jpg?sharp=10&vib=20&w=1200);
+    background-image: url(https://images3.alphacoders.com/208/208377.jpg);
     background-size:cover;
    
 } 
+
+.aboutimg {
+    color: white;
+    font-family: roboto;
+    font-size: 30px;
+    padding-bottom: 10px;
+    background-image: url(http://www.desktopwallpaperhd.net/wallpapers/17/d/night-city-background-computer-179261.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
 
 /*.wipbutton{
 	background-color:#44c767;
@@ -123,12 +129,14 @@ h1 {
     
 }
 
-.text h2{
+h2{
     font-size: 60px;
     margin-bottom: 20px;
     font-family: monospace;
     border-bottom: 5px solid white;
 }
+
+/*
 
 .Piano{
     -webkit-filter: brightness(0%);
@@ -172,6 +180,8 @@ h1 {
     animation-fill-mode: forwards;
 }
 
+*/
+
 .sm img {
     -webkit-filter: brightness(50%);
     transition-duration: 0.5s;
@@ -210,8 +220,8 @@ h1 {
 }
 
 .HistoryButton {
-	background-color:rgba(0,0,0, 0.5);	display:inline-block;
-	cursor:pointer;
+	background-color:rgba(0,0,0, 0.5);	
+	display:inline-block;
 	color:#ffffff;
 	font-family:Arial;
 	font-size:60px;
@@ -225,3 +235,10 @@ h1 {
 	color: black;
 }
 
+.howto {
+    font-family: roboto;
+    font-size: 30px;
+    background-image: url("http://cdn.paper4pc.com/images/city-background-wallpaper-1.jpg");
+    background-size: cover;
+    color: white;
+}
