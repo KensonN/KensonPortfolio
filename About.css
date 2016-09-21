@@ -25,10 +25,21 @@ ul {
     margin-top: -2%;
     padding: 0px 20px 20px 20px;
     border-radius: 50px;
+    display: inline-block;
 }
 
 .text > p{
     display: inline-block;
+    font-family: roboto;
+    color: white;
+    font-size: 30px;
+}
+
+pre {
+    height:120px;
+    width:240px;
+    border: 1px solid #ccc;
+    overflow:auto;
 }
 
 .socialmedia {
@@ -221,8 +232,4 @@ h2{
     color: white;
 }
 
-p {
-    font-family: roboto;
-    color: white;
-    font-size: 30px;
-}
+
