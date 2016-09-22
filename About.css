@@ -209,6 +209,7 @@ h2{
     top: 50%;
 }
 
+
 .HistoryButton {
 	background-color:rgba(0,0,0, 0.5);	
 	display:inline-block;
@@ -219,6 +220,7 @@ h2{
 	padding:6px 20px;
 	text-decoration:none;
 }
+
 
 .HistoryButton:hover {
 	background-color:white;
