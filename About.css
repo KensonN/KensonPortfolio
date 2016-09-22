@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 
 /*body {
 	cursor: url('Cursors/v2.cur'), auto;
@@ -25,7 +27,6 @@ ul {
     margin-top: -2%;
     padding: 0px 20px 20px 20px;
     border-radius: 50px;
-    display: inline-block;
 }
 
 .text > p{
@@ -50,7 +51,7 @@ pre {
 .navbar a {
     text-decoration: none;
     color: white;
-    font-family: roboto;
+    font-family: 'roboto';
     font-weight: bold;
     font-size: 25px;
     padding: 0px 20px;
