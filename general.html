@@ -59,14 +59,57 @@
             <h2>
                 Page Metadata
             </h2>
-                    <p>
-                        First, I needed to provide the metadata for my page. The only metadata I needed was the title of the page and the CSS file. The title tag is necessary in all HTML documents. It is the title that shows on the browser tab and comes up in search engine results.
-                    <div align=right>
-                        <code>
-                            <pre>&lt;title&gt;&quot;Your Title Here&quot;&lt;/title&gt;</pre>
-                        </code>
+            <table>
+                <tr>   
+                    <td>
+                        <p>
+                            First, I needed to provide the metadata for my page. The only metadata I needed was the title of the page and the CSS file. The title tag is necessary in all HTML documents. It is the title that shows on the browser tab and comes up in search engine results.
+                        </p>
+                    </td>
+                    <td>
+                    <p class="c">
+                        HTML
                     </p>
-                </div>
+                    <code>
+                        <pre>&lt;title&gt;&quot;Your Title Here&quot;&lt;/title&gt;</pre>
+                    </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Since I had 3 different Hardware HTML files, I needed to set different titles for each of them. Using the &lt;title&gt; tag, I was able to do this. For the hardware redirect page, I set the title as &ldquo;Hardware&rdquo;. For the parts page, I set it as &ldquo;Parts&rdquo;. Lastly, for the History page, I set the title as &ldquo;History&rdquo;.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;title&gt;&quot;Hardware&quot;&lt;/title&gt
+&lt;title&gt;&quot;Parts&quot;&lt;/title&gt;
+&lt;title&gt;&quot;History&quot;&lt;/title&gt;
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            To link the CSS file, I used the &lt;link&gt; tag. This tells the HTML file to use another CSS file for formatting. Since my CSS file was named &ldquo;About.css, I used the link tag to link the HTML to that CSS file. 
+                        </p>
+                    </td>
+                    <td>
+                        <p  class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;About.css&quot; type=&quot;text/css&quot; /&gt;
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>

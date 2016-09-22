@@ -37,10 +37,11 @@ ul {
 }
 
 pre {
-    height:120px;
-    width:240px;
+    height:190px;
+    width:350px;
     border: 1px solid #ccc;
     overflow:auto;
+    font-size: 20px;
 }
 
 .socialmedia {
@@ -233,4 +234,6 @@ h2{
     color: white;
 }
 
-
+.c {
+    text-align: center;
+}

@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="About.css" type="text/css" />
         <title>Content</title>
     </head>
-    <body>
+    <body class="howto">
         <div class="navbar">    
             <ul class="navbar">
                 <li>
@@ -48,6 +48,182 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="text">
+            <h1>
+                The Redirect Page
+            </h1>
+            <p>
+                Since I had two different topics for my hardware page, I felt it was necessary to split those two topics into different pages. However, since it would be a little confusing for a user browsing the website, I decided to dedicate a page redirecting to both these pages
+            </p>
+            <h2>
+                The Background
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            On this page, I have an image set as the background. To do this, I set the class of the body to &ldquo;hardware&rdquo;. I used the CSS &ldquo;background-image&rdquo; property to set the image to &ldquo;VectorPhone.jpg&rdquo;(stored with the HTML and CSS files). Other than that, the other CSS properties in the &ldquo;hardware&rdquo; class will be talked about later. 
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>hardware {
+background-image: url(VectorPhone.jpg)
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Background Opacity
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            I decided that I wanted to put an opaque background color over my background image. To do this, I created a div inside the &lt;body&gt; tag, with a class &ldquo;layer&rdquo;. The only purpose of the div is to put a background color over the background image. I used the &ldquo;background-color&rdquo; property to set the background color to rgba(0,0,0, 0.5). This would create a black but transparent color on the background, making the background image look darker. To position this layer to cover the whole page, I used the &ldquo;position&rdquo;, &ldquo;top&rdquo;, &ldquo;left&rdquo;, &ldquo;width&rdquo;, and &ldquo;height&rdquo; properties. I set the &ldquo;position&rdquo; property to position the background color. I then used the &ldquo;top&rdquo;,&rdquo;left&rdquo;, &ldquo;width&rdquo;, and &ldquo;height&rdquo; properties to stretch this background color across the whole page. I set the &ldquo;top&rdquo; and &ldquo;left&rdquo; properties to 0 so that there would be no space between the top and left sides of the page and the div containing the background. I then set the &ldquo;width&rdquo; and &ldquo;height&rdquo; class to 100% to stretch it across the whole page.                       
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+    &lt;div class=&quot;layer&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                    <code>
+                        <pre>.layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+                        </pre>
+                    </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Buttons
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            On this page, I needed a quick way for the user to easily see how to get to the two hardware pages. To do this, I created two buttons that redirected to one page each. I first created a div with the class &ldquo;buttons&rdquo;. In this div, created two anchor tags (&lt;a&gt;) to redirect to each page. One anchor tag had the text &ldquo;History&rdquo; while the other had the text &ldquo;Parts&rdquo;. Each of these anchor tags have the class &ldquo;HistoryButton&rdquo;.However, these anchor tags did not look like buttons. To make them look like buttons, I needed to use CSS. 
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML    
+                        </p>
+                        <code>
+                            <pre>&lt;body class=hardware&gt;
+    &lt;div class=&quot;layer&quot;&gt;
+        &lt;div class=buttons&gt;
+            &lt;a href=&quot;history.html&quot; class=&quot;HistoryButton&quot;&gt;
+                History
+            &lt;/a&gt;
+            &lt;a href=&quot;parts.html&quot; class=&quot;HistoryButton&quot;&gt;
+                Parts
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            In my CSS, I first used the &ldquo;background-color&rdquo;, &ldquo;display&rdquo;, &ldquo;color&rdquo;, &ldquo;font-family&rdquo;, &ldquo;font-size&rdquo;, &ldquo;font-weight&rdquo;, &ldquo;padding&rdquo;, and &ldquo;text-decoration&rdquo; properties for the &ldquo;HistoryButton&rdquo; class to make the buttons look like buttons. I used the &ldquo;background-color&rdquo; property to make the buttons have an opaque black color. Then, I set the &ldquo;display&rdquo; property to &ldquo;inline-block&rdquo; so that the buttons would appear next to each other. The &ldquo;color&rdquo;, &ldquo;font-family&rdquo;, and &ldquo;font-size&rdquo; properties change the font color, font family, and font size of the buttons. I then used &ldquo;font-weight&rdquo; to make the text bold and &ldquo;padding&rdquo; to make the button bigger. Lastly, I set the &ldquo;text-decoration&rdquo; property to none so that the default underline created by links in the browser would be removed.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>.HistoryButton {
+	background-color:rgba(0,0,0, 0.5);	
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:60px;
+	font-weight:bold;
+	padding:6px 20px;
+	text-decoration:none;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            To create the button background color change on hover, I created another “HistoryButton” class in CSS with a pseudo class of “:hover”. This lets me specify different properties for the buttons when I hover over them. In this pseudo class, I used the “background-color” and “color properties to set the background color to white and the text color to black on hover.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>.HistoryButton:hover {
+	background-color:white;
+	color: black;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            To create the button background color change on hover, I created another "HistoryButton" class in CSS with a pseudo class of “:hover”. This lets me specify different properties for the buttons when I hover over them. In this pseudo class, I used the “background-color” and “color properties to set the background color to white and the text color to black on hover.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>.buttons {
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
