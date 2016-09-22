@@ -64,7 +64,7 @@ pre {
     background-color: white;
     border-radius: 8px;
     color: black;
-    /*cursor: url('Cursors/v2.cur'), auto;*/
+    cursor: url('Cursors/v2.cur'), auto;
 }
 
 .layout {
@@ -101,7 +101,7 @@ pre {
 	text-decoration:none;
 	border-radius: 40px;
 	
-}*/
+}
 
 .wipbutton:hover {
 	background-color:#5cbf2a;
@@ -112,7 +112,7 @@ pre {
     top: 1px;
 }
 
-
+*/
 .Caption{
     font-size: 20px;
 }
@@ -133,7 +133,7 @@ h2{
     color: white;
 }
 
-/*
+
 
 .Piano{
     -webkit-filter: brightness(0%);
@@ -177,20 +177,21 @@ h2{
     animation-fill-mode: forwards;
 }
 
-*/
 
+/*
 .sm img {
     -webkit-filter: brightness(50%);
     transition-duration: 0.5s;
-    /*cursor: url('Cursors/v2.cur'), auto;*/
+    cursor: url('Cursors/v2.cur'), auto;
 }
 
 .sm img:hover {
     -webkit-filter: brightness(100%);
     transition-duration:0.5s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    /*cursor: url('Cursors/v2.cur'), auto;*/
+    cursor: url('Cursors/v2.cur'), auto;
 }
+*/
 
 .hardware {
     background-image: url("VectorPhone.jpg");
