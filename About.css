@@ -5,6 +5,11 @@ body {
 	cursor: url('Cursors/v2.cur'), auto;
 }
 
+body > * {
+    cursor: url('Cursors/v2.cur'), auto;
+
+}
+
 ul {
     white-space: nowrap;
 }
@@ -30,11 +35,11 @@ ul {
 }
 
 p{
-
     font-family: roboto;
     color: white;
     font-size: 30px;
     display: inline-block;
+    margin-right: 20px;
 }
 
 pre {
@@ -133,8 +138,7 @@ h2{
     color: white;
 }
 
-
-
+/*
 .Piano{
     -webkit-filter: brightness(0%);
     transition-duration: 1s;
@@ -177,7 +181,7 @@ h2{
     animation-fill-mode: forwards;
 }
 
-
+*/
 /*
 .sm img {
     -webkit-filter: brightness(50%);
