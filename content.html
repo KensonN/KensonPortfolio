@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="About.css" type="text/css" />
         <title>Content</title>
     </head>
-    <body>
+    <body class="howto">
         <div class="navbar">    
             <ul class="navbar">
                 <li>
@@ -48,6 +48,391 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="text">
+            <h1>
+                Hardware and Parts of a Computer Page
+            </h1>
+            <p>
+                This was the actual content of the hardware pages. I'm explaining both at the same time, since both are structured in the same way.
+            </p>
+            <h2>
+                Navigation Bar (navbar)
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            The underlying HTML code of the navbar is simply an unordered list with anchor tags as list items. I created a div to contain the list, with the class &ldquo;navbar&rdquo;. Inside this div, I created an unordered list using the &lt;ul&gt; tag. I then used the &lt;li&gt; tag to create list items that contained anchor tags linking to other pages. With all of this done, the navbar just looks like a list of links.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;ul class=&quot;navbar&quot;&gt;
+&lt;li&gt;
+    &lt;a href=index.html&gt;
+        Home
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href=&quot;about.html&quot;&gt;
+        About
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href=&quot;hardware.html&quot;&gt;
+        Hardware
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href=&quot;https://www.youtube.com/watch?v=2HQaBWziYvY&quot;&gt;
+        Calculator
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href=&quot;https://www.youtube.com/watch?v=ZbM6WbUw7Bs&quot;&gt;
+        Todo List
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href=&quot;https://www.youtube.com/watch?v=SQoA_wjmE9w&quot;&gt;
+        Vindinium
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href=&quot;https://www.youtube.com/watch?v=aoXDe8HxHBA&quot;&gt;
+        Big Project
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href=&quot;howto.html&quot;&gt;
+        How-To
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Because of this, we need CSS. In our CSS, we can define properties for our “navbar” class. In the CSS, I used the “background-color” property to set the background color to an opaque black. I also used the “border-radius” property to curze the corners of the nav bar. Lastly, I set the “font-size” property to 0 to reset the default browser formatting.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>.navbar {
+    font-size: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px; 
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Also, to finally make the links appear in a line, I first had to create a class that included everything in the &lt;li&gt; tags. This is shown in the code with the greater than symbol. I used the &ldquo;display&rdquo; tag to make all the items inline and used the &ldquo;width&rdquo; tag to space the buttons out evenly.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>.navbar > li {
+    width: 12.5%;
+    display: inline-block;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            For the text in the navbar, I created a selector that selected all of the anchor tags in the .navbar class. Then, I used some font properties to change the look of the links. One of the new tags used here is “text-decoration”. I set this to “none” so that the default link formatting would be removed. I also used some padding to space out the words to look more evenly distributed.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>.navbar a {
+    text-decoration: none;
+    color: white;
+    font-family: 'roboto';
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0px 20px;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Lastly, since I wanted the navbar links to change background and text color when hovered over, I created a pseudo class “:hover”. I used the “color” property for the text and the “background-color” property for the background color. I also used the “border-radius” property so the white background behind the text during the hover seems rounded, matching the navbar.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="p">
+                            CSS
+                        </p>
+                    <code>
+                        <pre>.navbar a:hover{
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+}
+                        </pre>
+                    </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Page Layout
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            On both hardware pages, there is a background image. I did this by adding the class “hardware” to the body tags of both pages. This class includes the “background-image” property, which sets the background image for the whole page.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <p id="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>.hardware {
+    background-image: url("VectorPhone.jpg");
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Also, all of the content of the page (excluding the navbar) has a black background color. I did this by putting all of the content in a div with the class “text”. In this class, I used the property “background-color” to create a black opaque color. Then, I used the “padding” and “margin-top” properties to position the content correctly. Lastly, I used the “border-radius” to round the corners.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+        &lt;div class=&quot;text&quot;&gt;
+        &lt;/div&gt;
+&lt;/body&gt;
+ 
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                    <code>
+                        <pre>.text {
+    background-color: rgba(0,0,0, 0.8);
+    margin-top: -2%;
+    padding: 0px 20px 20px 20px;
+    border-radius: 50px;
+}
+                        </pre>
+                    </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Main Page Header
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            To create the main page header, I used an &lt;h1&gt; tag. Then, in CSS, I specified a few properties using the h1 selector. I changed the font size using the &ldquo;font-size&rdquo; property, reset the bottom margin by setting the &ldquo;margin-bottom&rdquo; property to 0px, changed the font to Roboto using the &ldquo;font-family&rdquo; property, created a text underline using the &ldquo;text-decoration&rdquo; property, and used the &ldquo;color&rdquo; to make the header white.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+        &lt;div class=&quot;text&quot;&gt;
+                &lt;h1&gt;
+                    History&lt;    
+                /h1&gt;
+        &lt;/div&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>h1 {
+    font-size: 100px;
+    margin-bottom: 0px;
+    font-family: roboto;
+    text-decoration: underline;
+    color: white;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Smaller Headers
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            For the smaller headers, I used the &lt;h2&gt; tag. The CSS properties were almost the same as the main header. However, I set the &ldquo;font-size&rdquo; property to 60, set the &ldquo;margin-bottom&rdquo; to 20px, and removed the &ldquo;text-decoration&rdquo; underline. Instead, I created a underline using the &ldquo;border-bottom&ldquo; property.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+    &lt;div class=&quot;text&quot;&gt;
+        &lt;h1&gt;
+            History
+        &lt;/h1&gt;
+        &lt;h2&gt;
+            Vacuum Tubes
+        &lt;/h2&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+ 
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: roboto;
+    border-bottom: 5px solid white;
+    color: white;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Paragraphs
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            All of the paragraphs in the HTML are in paragraph tags. In these paragraph tags is the text and images of each section. In this section, we’ll talk about the text. In CSS, I created a selector that selects all of the paragraphs. In this selector, I used the “color” property to make the text white, set the font to Roboto using the “font-family” property, and set the font size to 30px using the “font-size” property.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="c">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+    &lt;div class=&quot;text&quot;&gt;
+        &lt;h1&gt;
+            History
+        &lt;/h1&gt;
+        &lt;h2&gt;
+            Vacuum Tubes
+        &lt;/h2&gt;
+        &lt;p&gt;
+            stuff
+        &lt;/p&gt;
+        &lt;/div&gt;
+&lt;/body&gt;
+ 
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <p class="c">
+                            CSS
+                        </p>
+                        <code>
+                            <pre>p{
+    display: inline-block;
+    font-family: roboto;
+    color: white;
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Images
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            For all of the images in both pages, I used a &lt;img&gt; tag that had the url of each image. In addition to the url, the tag also included a &ldquo;width&rdquo; property to size the image and a &ldquo;align&rdquo; property set to &ldquo;right&rdquo; to make the images align to the right. All of these image tags were placed before the text inside the paragraph tags. I did not use any CSS for the images.
+                        </p>
+                    </td>
+                    <td>
+                        <p class="">
+                            HTML
+                        </p>
+                        <code>
+                            <pre>&lt;body class=&quot;hardware&quot;&gt;
+    &lt;div class=&quot;text&quot;&gt;
+        &lt;h1&gt;
+            History
+        &lt;/h1&gt;
+        &lt;h2&gt;
+            Vacuum Tubes
+        &lt;/h2&gt;
+        &lt;img src=&quot;http://cdn.mos.cms.futurecdn.net/b5XerwXJrsM6HFEDS9LAP4.png&quot; width=400px align=&quot;right&quot;/&gt;
+        &lt;/div&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>

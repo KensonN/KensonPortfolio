@@ -29,8 +29,8 @@ ul {
     border-radius: 50px;
 }
 
-.text > p{
-    display: inline-block;
+p{
+
     font-family: roboto;
     color: white;
     font-size: 30px;
@@ -121,7 +121,6 @@ h1 {
     font-family: roboto;
     text-decoration: underline;
     color: white;
-    
 }
 
 h2{
