@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
-/*body {
+body {
 	cursor: url('Cursors/v2.cur'), auto;
-}*/
+}
 
 ul {
     white-space: nowrap;
@@ -34,6 +34,7 @@ p{
     font-family: roboto;
     color: white;
     font-size: 30px;
+    display: inline-block;
 }
 
 pre {
@@ -42,6 +43,7 @@ pre {
     border: 1px solid #ccc;
     overflow:auto;
     font-size: 20px;
+    margin:0px 20px;
 }
 
 .socialmedia {
@@ -237,4 +239,6 @@ h2{
 
 .c {
     text-align: center;
+    display: inherit;
+    font-size: 35px;
 }
