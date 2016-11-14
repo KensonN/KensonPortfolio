@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+html, body {
+    margin: 0;
+    height: 100%;
+}
 
 body {
 	cursor: url('Cursors/v2.cur'), auto;
 }
 
-body > * {
-    cursor: url('Cursors/v2.cur'), auto;
-
+body * {
+	cursor: url('Cursors/v2.cur'), auto;
 }
+
+
 
 ul {
     white-space: nowrap;
@@ -246,4 +251,13 @@ h2{
     text-align: center;
     display: inherit;
     font-size: 35px;
+}
+
+.calculator {
+    background-image: url("http://i.imgur.com/YgFFR.png");
+    background-size: cover;
+}
+
+.calculator * {
+    display: inline;
 }
