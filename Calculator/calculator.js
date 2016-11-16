@@ -8,7 +8,7 @@ var sum;
 calculate.addEventListener("click", function(){
 //Defining a variable to detect when one of the four operation is selected called selected
 //operation.selectedIndex will return the selected option
-    var selected = operation.options[operation.selectedIndex].text;
+    var selected = operation.value;
 //If the plus sign is chosen, add
 //We use parseInt so that the numbers are added instead of put next to each other in a string
     if (selected==="+") {

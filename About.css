@@ -228,8 +228,13 @@ h2{
 	font-weight:bold;
 	padding:6px 20px;
 	text-decoration:none;
+	outline: white solid 5px;
+	margin: 20px;
 }
 
+#answer {
+    
+}
 
 .HistoryButton:hover {
 	background-color:white;
@@ -293,6 +298,10 @@ select:selection {
 }
 
 #Answer {
+    font-family: roboto;
+    color: white;
+        display: inline-block;
+    margin-right: 20px;
     font-size: 96px;
 }
 
