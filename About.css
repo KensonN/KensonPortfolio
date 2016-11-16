@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-html, body {
-    margin: 0;
-    height: 100%;
+html {
+  height: 100%;
 }
 
-body {
-	cursor: url('Cursors/v2.cur'), auto;
-}
+
 
 body * {
-	cursor: url('Cursors/v2.cur'), auto;
+	/*cursor: url('Cursors/v2.cur'), auto;*/
 }
 
 
@@ -74,7 +71,7 @@ pre {
     background-color: white;
     border-radius: 8px;
     color: black;
-    cursor: url('Cursors/v2.cur'), auto;
+    /*cursor: url('Cursors/v2.cur'), auto;*/
 }
 
 .layout {
@@ -253,11 +250,61 @@ h2{
     font-size: 35px;
 }
 
-.calculator {
+#calculator {
     background-image: url("http://i.imgur.com/YgFFR.png");
     background-size: cover;
 }
 
-.calculator * {
-    display: inline;
+
+input, textarea {
+    background-color : black; 
+    border: 0px;
+    cursor: white;
+    color: white;
+    font-size: 96px;
+    width: 400px;
+    outline: white solid;
+    margin: 0px 20px 0px 20px;
+    
+}
+
+.backgroundcolor {
+    background-color: rgba(0,0,0, 0.8);
+    margin-top: -2%;
+    padding: 0px 20px 20px 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+select {
+    background-color: black;
+    color: white;
+    font-size: 48px;
+    font: roboto;
+}
+
+select:selection {
+    color: white;
+    background: black;
+}
+
+.center {
+    text-align: center;
+}
+
+#Answer {
+    font-size: 96px;
+}
+
+#calculate {
+    background-color: black;
+    color: white;
+    font-size: 48px;
+    font: roboto;
+}
+
+#calculate:hover {
+    background-color: white;
+    color: black;
+    outline: black solid 0px;
 }

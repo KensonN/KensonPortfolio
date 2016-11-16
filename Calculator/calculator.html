@@ -4,31 +4,95 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="../About.css" type="text/css" />
 </head>
-<body class="calculator">
-    <div class="number1">
-        <input>
+<body id="calculator">
+    <div class="navbar">    
+        <ul class="navbar">
+            <li>
+                <a href="../index.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="../about.html">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="../hardware.html">
+                    Hardware
+                </a>
+            </li>
+            <li>
+                <a href="../r.html">
+                    Calculator
+                </a>
+            </li>
+            <li>
+                <a href="../r.html">
+                    Todo List
+                </a>
+            </li>
+            <li>
+                <a href="../r.html">
+                    Vindinium
+                </a>
+            </li>
+            <li>
+                <a href="../r.html">
+                    Big Project
+                </a>
+            </li>
+            <li>
+                <a href="../howto.html">
+                    How-To
+                </a>
+            </li>
+        </ul>
     </div>
-    <div class="operationdrop">
-        <select>
-            <option>
-                +
-            </option>
-            <option>
-                -
-            </option>
-            <option>
-                *
-            </option>
-            <option>
-                /
-            </option>
-        </select>
-    </div>
-    <div>
-        <input>
-    </div>
-    <p>=</p>
-    <script type="text/javascript" src="Calculator\calculator.js">
-    </script>
+    <div class="backgroundcolor">
+        <div>
+        <h1>
+            Calculator
+        </h1>
+        <p>
+            NOTE: For the nth root function, negative numbers with a nth root bigger than one are not supported.
+        </p>
+        <div id="calulatorthings">
+            <input id="number1">
+            <select size="1" id="operation">
+                <option>
+                    -Select-
+                </option>
+                <option value=1>
+                    +
+                </option>
+                <option value=2>
+                    -
+                </option>
+                <option value=3>
+                    *
+                </option>
+                <option value=4>
+                    /
+                </option>
+                <option>
+                    ^
+                </option>
+                <option>
+                    nth root
+                </option>
+            </select>
+            <input id="number2">
+            <button id="calculate">
+                Solve!
+            </button>
+            <br>
+                <p id="Answer"><!--
+                --></p>
+            </br>
+            </div>
+        </div>
+        </div>
+    <script type="text/javascript" src="calculator.js"></script>
 </body>
 </html>
