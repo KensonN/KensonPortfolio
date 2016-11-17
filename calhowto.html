@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator How-To</title>
+    <link rel="stylesheet" href="Styles.css" type="text/css" />
 </head>
-<body class="text">
+<body class="howto">
     <div class="navbar">    
         <ul class="navbar">
             <li>
-                <a href=index.html?v=1.1>
+                <a href="index.html?v=1.2">
                     Home
                 </a>
             </li>
             <li>
-                <a href="about.html?v=1.1">
+                <a href="about.html?v=1.2">
                     About
                 </a>
             </li>
             <li>
-                <a href="hardware.html?v=1.1">
+                <a href="hardware.html?v=1.2">
                     Hardware
                 </a>
             </li>
             <li>
-                <a href="Calculator/calculator.html?v=1.1">
+                <a href="Calculator/calculator.html?v=1.2">
                     Calculator
                 </a>
             </li>
@@ -43,14 +44,119 @@
                 </a>
             </li>
             <li>
-                <a href="howto.html?v=1.1">
+                <a href="howto.html?v=1.2">
                     How-To
                 </a>
             </li>
         </ul>
     </div>
-    <div>
-        
+    <div class="text">
+        <h1>
+            Calculator
+        </h1>
+        <p>
+            This is a page describing how the code behind the calculator on this website works. This page will be divided into 3 different parts: the HTML, the CSS, and the JavaScript of the page.
+        </p>
+        <h2>
+            The HTML
+        </h2>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        The HTML of this page is very simple. We'll first be talking about the metadata of this page. The metadata is the information inside the head tags. The title tag of the page is the name of the tab. The link tag links the CSS file, named Styles.css, to the HTML.
+                    </p>
+                </td>
+                <td>
+                    <code>
+                        <pre>&lt;title&gt;Calculator&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../Styles.css&quot; type=&quot;text/css&quot; /&gt;
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        The rest of the HTML is the navigation bar and the formatting of the calculator. Since we have talked about the navigation bar in another page, we will instead talk about the calculator itself. The calculator is made up of 2 input boxes, one dropdown menu with the choice to choose and operation, and a "calculate" button to execute the problems.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        First, we will talk about the input boxes on the page. Both are very simple. They are &lt;input&gt; tags, with seperate ID's for each of them. We will use these ID's later to make our calculator work.
+                    </p>
+                </td>
+                <td>
+                    <code>
+                        <pre>&lt;input id=&quot;number1&quot;&gt;
+&lt;input id=&quot;number2&quot;&gt;                                
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Now, we will talk about the dropdown menu. To create our dropdown menu, we use the &lt;select&gt; tag. Then, to create our options in the dropdown menu, we use the &lt;option&gt; tag.
+                    </p>
+                </td>
+                <td>
+                    <code>
+                        <pre>&lt;select size=&quot;1&quot; id=&quot;operation&quot;&gt;
+    &lt;option&gt;
+        -Select-
+    &lt;/option&gt;
+    &lt;option&gt;
+        +
+    &lt;/option&gt;
+    &lt;option&gt;
+        -
+    &lt;/option&gt;
+    &lt;option&gt;
+        *
+    &lt;/option&gt;
+    &lt;option&gt;
+        /
+    &lt;/option&gt;
+    &lt;option&gt;
+        ^
+    &lt;/option&gt;
+    &lt;option&gt;
+        nth root
+    &lt;/option&gt;
+&lt;/select&gt;
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            The JavaScript
+        </h2>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        We will now talk about the JavaScript of the page. Since JavaScript and HTML work closely, we have already assigned ID's to HTML elements that will be needed for the calculator to work. 
+                    </p>                
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        We are going to first talk about the variables we defined at the very beginning of the JavaScript file. Each of the variables represents an element of the HTML file, such as the input boxes and dropdown menu. We can link the variables to the HTML elements using the "document.getElementById" function in JavaScript. 
+                    </p>                
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

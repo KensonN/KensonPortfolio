@@ -61,7 +61,7 @@ calculate.addEventListener("click", function(){
     }
 //If Nth root is selected, use the Nth root function
     if (selected==="nth root") {
-        sum = Math.pow(number1.value, 1/number2.value);
+        sum = Math.pow(number2.value, 1/number1.value);
 //Same if statement as lines 19-23
         if (sum > "1.797693134862315E+308") {
             document.getElementById("Answer").innerHTML = "Number too big! Try again";
