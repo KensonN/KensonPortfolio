@@ -10,7 +10,9 @@ body * {
 	/*cursor: url('Cursors/v2.cur'), auto;*/
 }
 
-
+select::selection {
+    color: white;
+}
 
 ul {
     white-space: nowrap;
@@ -37,7 +39,7 @@ ul {
 }
 
 p{
-    font-family: roboto;
+    font-family: roboto, arial;
     color: white;
     font-size: 30px;
     display: inline-block;
@@ -61,7 +63,7 @@ pre {
 .navbar a {
     text-decoration: none;
     color: white;
-    font-family: 'roboto';
+    font-family: 'roboto', "arial";
     font-weight: bold;
     font-size: 25px;
     padding: 0px 20px;
@@ -76,7 +78,7 @@ pre {
 
 .layout {
     color: white;
-    font-family: roboto;
+    font-family: roboto, "arial";
     font-size: 30px;
     padding-bottom: 10px;
     background-image: url(https://images3.alphacoders.com/208/208377.jpg);
@@ -86,7 +88,7 @@ pre {
 
 .aboutimg {
     color: white;
-    font-family: roboto;
+    font-family: roboto, "arial";
     font-size: 30px;
     padding-bottom: 10px;
     background-image: url(http://www.desktopwallpaperhd.net/wallpapers/17/d/night-city-background-computer-179261.jpg);
@@ -127,7 +129,7 @@ pre {
 h1 {
     font-size: 100px;
     margin-bottom: 0px;
-    font-family: roboto;
+    font-family: roboto, "arial";
     text-decoration: underline;
     color: white;
 }
@@ -135,7 +137,7 @@ h1 {
 h2{
     font-size: 60px;
     margin-bottom: 20px;
-    font-family: roboto;
+    font-family: roboto, "arial";
     border-bottom: 5px solid white;
     color: white;
 }
@@ -223,7 +225,7 @@ h2{
 	background-color:rgba(0,0,0, 0.5);	
 	display:inline-block;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: Roboto, "Arial";
 	font-size:60px;
 	font-weight:bold;
 	padding:6px 20px;
@@ -238,7 +240,7 @@ h2{
 }
 
 .howto {
-    font-family: roboto;
+    font-family: roboto, arial;
     font-size: 30px;
     background-image: url("http://cdn.paper4pc.com/images/city-background-wallpaper-1.jpg");
     background-size: cover;
@@ -294,7 +296,7 @@ select:selection {
 }
 
 #Answer {
-    font-family: roboto;
+    font-family: roboto, arial;
     color: white;
         display: inline-block;
     margin-right: 20px;
