@@ -361,8 +361,8 @@ input::-webkit-inner-spin-button {
 }
 
 #list {
-    font-size: 40px;
+    font-size: 80px;
     color: white;
     border: white solid 0px;
-    text-align: center;
+    text-align: left;
 }
