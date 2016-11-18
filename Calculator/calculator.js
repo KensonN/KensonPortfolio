@@ -13,10 +13,10 @@ calculate.addEventListener("click", function(){
 //We use parseInt so that the numbers are added instead of put next to each other in a string
     if (selected==="+") {
         sum = parseInt(number1.value) + parseInt(number2.value);
-//1.897693134862315E+308 is the maximum value javascript can handle. After that, it will just display infinity.
+//1.997693134862315E+308 is the maximum value javascript can handle. After that, it will just display infinity.
 //If the sum is larger than infinity, display "Number is too large"
 //If the sum is less than or equal to infinity, display the sum
-        if (sum > "1.897693134862315E+308") {
+        if ("-1.997693134862315E+308" > sum > "1.997693134862315E+308") {
             document.getElementById("Answer").innerHTML = "Number too big! Try again";
         }
         else document.getElementById("Answer").innerHTML = sum;
@@ -26,7 +26,7 @@ calculate.addEventListener("click", function(){
         sum = parseInt(number1.value) - parseInt(number2.value);
 //Same if statement as lines 19-23
 
-        if (sum > "1.897693134862315E+308") {
+        if ("-1.997693134862315E+308" > sum > "1.997693134862315E+308") {
             document.getElementById("Answer").innerHTML = "Number too big! Try again";
         }
         else document.getElementById("Answer").innerHTML = sum;
@@ -36,7 +36,7 @@ calculate.addEventListener("click", function(){
     if (selected==="*") {
         sum = parseInt(number1.value) * parseInt(number2.value);
 //Same if statement as lines 19-23
-        if (sum > "1.897693134862315E+308") {
+        if ("-1.997693134862315E+308" > sum > "1.997693134862315E+308") {
             document.getElementById("Answer").innerHTML = "Number too big! Try again";
         }
         else document.getElementById("Answer").innerHTML = sum;
@@ -45,7 +45,7 @@ calculate.addEventListener("click", function(){
     if (selected==="/") {
         sum = parseInt(number1.value) / parseInt(number2.value);
 //Same if statement as lines 19-23
-        if (sum > "1.897693134862315E+308") {
+        if ("-1.997693134862315E+308" > sum > "1.997693134862315E+308") {
             document.getElementById("Answer").innerHTML = "Number too big! Try again";
         }
         else document.getElementById("Answer").innerHTML = sum;   
@@ -54,7 +54,7 @@ calculate.addEventListener("click", function(){
     if (selected==="^") {
         sum = Math.pow(number1.value, number2.value);
 //Same if statement as lines 19-23
-        if (sum > "1.897693134862315E+308") {
+        if ("-1.997693134862315E+308" > sum > "1.997693134862315E+308") {
             document.getElementById("Answer").innerHTML = "Number too big! Try again";
         }
         else document.getElementById("Answer").innerHTML = sum;
@@ -63,7 +63,7 @@ calculate.addEventListener("click", function(){
     if (selected==="nth root") {
         sum = Math.pow(number2.value, 1/number1.value);
 //Same if statement as lines 19-23
-        if (sum > "1.897693134862315E+308") {
+        if ("-1.997693134862315E+308" > sum > "1.997693134862315E+308") {
             document.getElementById("Answer").innerHTML = "Number too big! Try again";
         }
         else document.getElementById("Answer").innerHTML = sum; 

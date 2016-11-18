@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+* {
+    font-family: roboto;
+}
+
 html {
   height: 100%;
 }
@@ -259,7 +263,7 @@ h2{
 }
 
 
-input, textarea {
+#calculatorthings input, textarea {
     background-color : black; 
     border: 0px;
     cursor: white;
@@ -319,4 +323,46 @@ select:selection {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+.todo{
+    background-image: url("http://wallpapercave.com/wp/o0a73QI.jpg");
+    background-size: cover;
+}
+
+#todolist input {
+    background-color : black; 
+    border: 0px;
+    cursor: white;
+    color: white;
+    font-size: 80px;
+    min-width: 20px;
+    max-width: 800px;
+    outline: white solid;
+    margin: 0px 20px 0px 20px;
+}
+
+#add {
+    background-color: black;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+#add:hover {
+    background-color: white;
+    color: black;
+    outline: black solid 0px;
+}
+
+.Taskstitle {
+    border-bottom: 0;
+    font-weight: normal;
+}
+
+#list {
+    font-size: 40px;
+    color: white;
+    border: white solid 0px;
+    text-align: center;
 }

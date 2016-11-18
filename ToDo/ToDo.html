@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
     <link rel="stylesheet" href="../CSS/Styles.css" type="text/css" />
 </head>
-<body id="calculator">
+<body class="todo">
     <div class="navbar">    
         <ul class="navbar">
             <li>
@@ -49,50 +50,21 @@
             </li>
         </ul>
     </div>
-    <div class="backgroundcolor">
-        <div>
+    <div class="backgroundcolor" id="todolist">
         <h1>
-            Calculator
+            To-Do List
         </h1>
         <p>
-            NOTE: For the nth root function, negative numbers with a nth root bigger than one are not supported.
+            To use the to-do list, write in a task in the input box. If you want to check the task off, click it once. If you want to delete a task, click it twice. If you would like to edit a task, click the edit button next to each task. 
         </p>
-        <div id="calculatorthings">
-            <input id="number1" type="number">
-            <select size="1" id="operation">
-                <option>
-                    -Select-
-                </option>
-                <option>
-                    +
-                </option>
-                <option>
-                    -
-                </option>
-                <option>
-                    *
-                </option>
-                <option>
-                    /
-                </option>
-                <option>
-                    ^
-                </option>
-                <option>
-                    nth root
-                </option>
-            </select>
-            <input id="number2" type="number">
-            <button id="calculate">
-                Solve!
-            </button>
-            <br>
-            <br>
-                <div id="Answer"><!--
-            --></div>
-            </div>
+        <input placeholder="Enter Task" id="entertask">
+        <button id="add">Add</button>
+        <h2 class="Taskstitle">
+            Tasks:
+        </h2>
+        <div id="list">
         </div>
-        </div>
-    <script type="text/javascript" src="calculator.js?v=1.9"></script>
+    </div>
+    <script type="text/javascript" src="ToDo.js"></script>
 </body>
 </html>
