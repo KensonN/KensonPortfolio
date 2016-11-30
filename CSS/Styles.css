@@ -360,8 +360,15 @@ input::-webkit-inner-spin-button {
 }
 
 #list {
-    font-size: 80px;
+    font-size: 55px;
     color: white;
     border: white solid 0px;
-    text-align: left;
+    text-align: center;
+    list-style-type: none;
 }
+
+#list li:hover {
+    background-color: white;
+    color: black;
+}
+
