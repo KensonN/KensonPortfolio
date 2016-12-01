@@ -360,7 +360,7 @@ input::-webkit-inner-spin-button {
 }
 
 #list {
-    font-size: 5px;
+    font-size: 50px;
     color: white;
     border: white solid 0px;
     text-align: center;
