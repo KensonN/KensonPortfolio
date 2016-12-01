@@ -96,7 +96,7 @@ pre {
     padding-bottom: 10px;
     background-image: url(http://www.desktopwallpaperhd.net/wallpapers/17/d/night-city-background-computer-179261.jpg);
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 0%
 }
 
 /*.wipbutton{
@@ -360,7 +360,7 @@ input::-webkit-inner-spin-button {
 }
 
 #list {
-    font-size: 55px;
+    font-size: 5px;
     color: white;
     border: white solid 0px;
     text-align: center;
