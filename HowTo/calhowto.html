@@ -55,7 +55,7 @@
             Calculator
         </h1>
         <p>
-            This is a page describing how the code behind the calculator on this website works. This page will be divided into 3 different parts: the HTML, the CSS, and the JavaScript of the page.
+            This is a page describing how the code behind the calculator on this website works. This page will be divided into 2 different parts: the HTML and the JavaScript of the page.
         </p>
         <h2>
             The HTML
@@ -64,13 +64,13 @@
             <tr>
                 <td>
                     <p>
-                        The HTML of this page is very simple. We'll first be talking about the metadata of this page. The metadata is the information inside the head tags. The title tag of the page is the name of the tab. The link tag links the CSS file, named ../../CSS/Styles.css, to the HTML.
+                        The HTML of this page is very simple. We'll first be talking about the metadata of this page. The metadata is the information inside the head tags. The title tag of the page is the name of the tab. The link tag links the CSS file, named ../CSS/Styles.css, to the HTML.
                     </p>
                 </td>
                 <td>
                     <code>
                         <pre>&lt;title&gt;Calculator&lt;/title&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;../../../CSS/Styles.css&quot; type=&quot;text/css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../CSS/Styles.css&quot; type=&quot;text/css&quot; /&gt;
                         </pre>
                     </code>
                 </td>
@@ -228,56 +228,31 @@ var calculate = document.getElementById("calculate");
             <tr>
                 <td>
                     <p>
-                        In addition to just the operations, I made a check in each of the if statements to output to replace Infinity and -Infinity with "Number too big. Try again"
+                        In addition to just the operations, I made a check in each of the if statements to output to replace Infinity and -Infinity with "Number too big. Try again".
                     </p>
                 </td>
                 <td>
                     <code>
-                        <pre>calculate.addEventListener("click", function (){
-    var selected = operation.value; 
-    if selected==="+") {
-    sum = parseInt(number1.value) + parseInt(number2.value)
-    if (sum === Infinity || sum === -Infinity ) {
-            document.getElementById("Answer").innerHTML = "Number too big! Try again";
+                        <pre>if (sum === Infinity || sum === -Infinity ) {
+    document.getElementById("Answer").innerHTML = "Number too big! Try again";
         }
-    else document.getElementById("Answer").innerHTML = sum;
+    else {
+    document.getElementById("Answer").innerHTML = sum;
     }
-    if selected==="-") {
-    sum = parseInt(number1.value) - parseInt(number2.value)
-    if (sum === Infinity || sum === -Infinity ) {
-            document.getElementById("Answer").innerHTML = "Number too big! Try again";
-        }
-    else document.getElementById("Answer").innerHTML = sum;
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    Because the nth root function can sometimes return NaN due to the method I am using, I also created a check for NaN as a result.
+                </td>
+                <td>
+                    <code>
+                        <pre>if (document.getElementById("Answer").innerHTML === "NaN") {
+    document.getElementById("Answer").innerHTML = "Negative numbers are not supported!"
     }
-    if selected==="*") {
-    sum = parseInt(number1.value) * parseInt(number2.value)
-    if (sum === Infinity || sum === -Infinity ) {
-            document.getElementById("Answer").innerHTML = "Number too big! Try again";
-        }
-    else document.getElementById("Answer").innerHTML = sum;
-    }
-    if selected==="/") {
-    sum = parseInt(number1.value) / parseInt(number2.value)
-    if (sum === Infinity || sum === -Infinity ) {
-            document.getElementById("Answer").innerHTML = "Number too big! Try again";
-        }
-    else document.getElementById("Answer").innerHTML = sum;
-    }
-    if selected==="^") {
-    sum = Math.pow(number1.value, number2.value)
-    if (sum === Infinity || sum === -Infinity ) {
-            document.getElementById("Answer").innerHTML = "Number too big! Try again";
-        }
-    else document.getElementById("Answer").innerHTML = sum;
-    }
-    if selected==="nth root") {
-    sum = Math.pow(number1.value, 1/number2.value)
-    if (sum === Infinity || sum === -Infinity ) {
-            document.getElementById("Answer").innerHTML = "Number too big! Try again";
-        }
-    else document.getElementById("Answer").innerHTML = sum;
-    }
-})
                         </pre>
                     </code>
                 </td>
