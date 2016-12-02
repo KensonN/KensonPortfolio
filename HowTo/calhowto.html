@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Calculator How-To</title>
@@ -154,6 +154,49 @@
                     <p>
                         We are going to first talk about the variables we defined at the very beginning of the JavaScript file. Each of the variables represents an element of the HTML file, such as the input boxes and dropdown menu. We can link the variables to the HTML elements using the "document.getElementById" function in JavaScript. 
                     </p>                
+                </td>
+                <td>
+                    <code>
+                        <pre>var number1 = document.getElementById("number1");
+var operation = document.getElementById("operation");
+var number2 = document.getElementById("number2");
+var calculate = document.getElementById("calculate");
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Next, we will talk about the event listener. This is an event listener to look for a click of the button with the id "calculate". Because of this, we start off our event listener statement with the variable calculate. Since we are also looking for a click, we also need to write "click" in our event listener to let the Javascript know what we are looking for is a click. Lastly, we write function so that we can contain code on what to do once the button is pressed.
+                    </p>
+                </td>
+                <td>
+                    <code>
+                        <pre>calculate.addEventListener("click", function(){
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Inside the function, I first define a variable called "selected". I set this variable equal to the value of the variable "operation", which is the dropdown menu that allows for a user to choose a function.  
+                    </p>
+                </td>
+                <td>
+                    <code>
+                        <pre>calculate.addEventListener("click", function(){
+    var selected = operation.value
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        
+                    </p>
                 </td>
             </tr>
         </table>
