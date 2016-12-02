@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Calculator How-To</title>
@@ -195,8 +195,91 @@ var calculate = document.getElementById("calculate");
             <tr>
                 <td>
                     <p>
-                        
+                        After defining a variable to detect the dropdown menu item, I created if/else statements to see what operation to do. For example, one statement says "if + is selected, then add the 2 numbers". For each of the operations, I had to use parseInt so that instead of just adding the strings together, it would add the numbers together instead. For the nth root, since the nth root is the same as 1 over the exponent, I used the exponent function of JavaScript.
                     </p>
+                </td>
+                <td>
+                    <code>
+                        <pre>calculate.addEventListener("click", function (){
+    var selected = operation.value; 
+    if selected==="+") {
+    sum = parseInt(number1.value) + parseInt(number2.value)
+    }
+    if selected==="-") {
+    sum = parseInt(number1.value) - parseInt(number2.value)
+    }
+    if selected==="*") {
+    sum = parseInt(number1.value) * parseInt(number2.value)
+    }
+    if selected==="/") {
+    sum = parseInt(number1.value) / parseInt(number2.value)
+    }
+    if selected==="^") {
+    sum = Math.pow(number1.value, number2.value)
+    }
+    if selected==="nth root") {
+    sum = Math.pow(number1.value, 1/number2.value)
+    }
+})
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        In addition to just the operations, I made a check in each of the if statements to output to replace Infinity and -Infinity with "Number too big. Try again"
+                    </p>
+                </td>
+                <td>
+                    <code>
+                        <pre>calculate.addEventListener("click", function (){
+    var selected = operation.value; 
+    if selected==="+") {
+    sum = parseInt(number1.value) + parseInt(number2.value)
+    if (sum === Infinity || sum === -Infinity ) {
+            document.getElementById("Answer").innerHTML = "Number too big! Try again";
+        }
+    else document.getElementById("Answer").innerHTML = sum;
+    }
+    if selected==="-") {
+    sum = parseInt(number1.value) - parseInt(number2.value)
+    if (sum === Infinity || sum === -Infinity ) {
+            document.getElementById("Answer").innerHTML = "Number too big! Try again";
+        }
+    else document.getElementById("Answer").innerHTML = sum;
+    }
+    if selected==="*") {
+    sum = parseInt(number1.value) * parseInt(number2.value)
+    if (sum === Infinity || sum === -Infinity ) {
+            document.getElementById("Answer").innerHTML = "Number too big! Try again";
+        }
+    else document.getElementById("Answer").innerHTML = sum;
+    }
+    if selected==="/") {
+    sum = parseInt(number1.value) / parseInt(number2.value)
+    if (sum === Infinity || sum === -Infinity ) {
+            document.getElementById("Answer").innerHTML = "Number too big! Try again";
+        }
+    else document.getElementById("Answer").innerHTML = sum;
+    }
+    if selected==="^") {
+    sum = Math.pow(number1.value, number2.value)
+    if (sum === Infinity || sum === -Infinity ) {
+            document.getElementById("Answer").innerHTML = "Number too big! Try again";
+        }
+    else document.getElementById("Answer").innerHTML = sum;
+    }
+    if selected==="nth root") {
+    sum = Math.pow(number1.value, 1/number2.value)
+    if (sum === Infinity || sum === -Infinity ) {
+            document.getElementById("Answer").innerHTML = "Number too big! Try again";
+        }
+    else document.getElementById("Answer").innerHTML = sum;
+    }
+})
+                        </pre>
+                    </code>
                 </td>
             </tr>
         </table>
