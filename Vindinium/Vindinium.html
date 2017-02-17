@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How My Vindinium Bot Works</title>
+        <link rel="stylesheet" href="../CSS/Styles.css" type="text/css" />
+    </head>
+    <body class="howto">
+        <div class="navbar">    
+            <ul class="navbar">
+                <li>
+                    <a href="../Home/index.html?v=1.01">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="../About/about.html?v=1.01">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="../ReDirect/hardware.html?v=1.01">
+                        Hardware
+                    </a>
+                </li>
+                <li>
+                    <a href="../Calculator/calculator.html?v=1.01">
+                        Calculator
+                    </a>
+                </li>
+                <li>
+                    <a href="../ToDo/ToDo.html">
+                        Todo List
+                    </a>
+                </li>
+                <li>
+                    <a href="../Vindinium/Vindinium.html">
+                        Vindinium
+                    </a>
+                </li>
+                <li>
+                    <a href="https://goo.gl/w0ma73">
+                        Big Project
+                    </a>
+                </li>
+                <li>
+                    <a href="../ReDirect/howto.html?v=1.01">
+                        How-To
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class = "text">
+            <h1>
+                What is Vindinium?
+            </h1>
+            <p>
+                Vindinium is an AI programming challenge, where you must program an AI bot to beat the other bots in the game. To win, you must collect the most gold out of all 4 players of a game. For this project, we were provided with a modified version of the Node.js Vindinium starter pack. Node.js is a platform based on Javascript, which works best with networking. Because of prior usage of Javascript in the class and the need to send network request to the Vindiunium server, Node.js was the starter pack our whole class used. 
+            </p>
+            <p>
+                This page will detail the code written which was not included in the starter pack. If you would like to see the modified version of the Node.js Vindinium starter pack, the link will be <a href= https://github.com/MattHesby/vindinium-js-starter style ="color: white; font: Roboto"> here</a>.
+            </p>
+            <p class="center">
+                <img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/a0/120663/73d89cbf74dde0cacf22233ec6dc6a79-original.png">
+            </p>
+            <p style="font-size: 20px; font-style:italic; color: grey" class="center">
+                Example of a Vindinium game board
+            </p>
+            <h2>
+                Global Data
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <p> 
+                            The first section of the code in the starter pack is the Global Data section. This is a section of my code where I define variables used throghout the code and create arrays that I used in the later tasks.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <img style="max-width: 70%;" src= ../sc/globalData.png>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>    
+                        <h3>
+                            Variable "i"
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            One of the first lines of the Global Data is defining variable "i". I define variable "i" because in all for loops used in my code, I always need to use "i". 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//Var i is the variable used in all of the for loops in my bot
+var i;
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            "otherMines" Array
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        I also created an array called "otherMines". This is an array to include all the mines on the map except for ones I currently own. To do this, I first set the array equal to the mines of the first player in the "enemyBots" array, an array created in the starter pack that contains all enemy players. Then, I concatentated the rest of the enemy mines and the unclaimed mines to the array.
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//This is to create an array with all mines on the map except for my mines, including free mines and enemy mines
+var otherMines = [];
+//First, I set the array equal to the mines of the first enemy player in the "enemyBots" array
+otherMines = enemyBots[0].mines;
+//Then, I concatenated the 2 other enemy players mines and the free mines
+otherMines = otherMines.concat(enemyBots[1].mines, enemyBots[2].mines, bot.freeMines);
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            "allMines" variable
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            I also created a variable called "allMines", which is the length of the array of the positions of mines for each player, added with the number of unclaimed mines. This was to give me the amount of mines on the map so that I could check if my code was working properly. 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//This will create an array with all of the mines on the map. I created a variable that added the length each mine array of each player with the free mines added
+var allMines = enemyBots[0].mines.length + enemyBots[1].mines.length + enemyBots[2].mines.length + bot.yourBot.mines.length + bot.freeMines.length;
+//This will tell me in the console how many mines are in the map
+console.log("Mines on map: " + allMines);
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>    
+                        <h3>
+                            "closestEnemy" array
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        The "closestEnemy" array is used to find the closest player to my bot, regardless of their amount of mines. To do this, I first created the array "closestEnemy", which I set equal to the first player in the "enemyBot" array. Then, using a for loop, I tested to see if my distance from the current "closestEnemy" was further than another player. If it was, then the "closestEnemy" was set equal to that new closer player.
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//This will find the enemy that is closest to my player
+//Created an array equal to first item in enemy bot array
+var closestEnemy = enemyBots[0];
+//For loop that will run the if statement 3 times, since there are 3 enemy bots
+for (var i = 0; i &lt; enemyBots.length; i++) {
+//If statement that will check if the current closestEnemy is actually the closest
+    if (bot.findDistance(myPos, closestEnemy.posArray) > bot.findDistance(myPos, enemyBots[i].posArray)) {
+//Sets the closestEnemy to the one found to be closer
+        closestEnemy = enemyBots[i];
+    }
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            "enemiesWithMines" Array
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Next, I created an array to list all the players with at least one mine. To do this, I first defined an array called "enemiesWithMines". Then, I created an for loop that ran through an if statement that found that if an enemy's mine count was greater than zero, then add that bot's informtion into the "enemiesWithMines" array. 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//Sets closestTarget to closest enemy with at least one mine for attacking later on
+//Sets variable called "closestTarget" to first item in array "enemiesWithMines"
+var closestTarget = enemiesWithMines[0];
+for (var i = 0; i &lt; enemyBots.length; i++) {
+    if (bot.findDistance(myPos, closestTarget.posArray) > bot.findDistance(myPos, enemiesWithMines.posArray)) {
+        closestTarget = enemiesWithMines[i];
+    }
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            "richestEnemy" array 
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lastly, I created an array and for loop to find the richest enemy for the class. I first defined the array "richestEnemy", which is equal to the first player in the "enemiesWithMines" array. Then, I compared that first player to the other players in the game, using the for loop to check through the array. If an emeny had more mines than the previously selected "richestEnemy" player, than the new player becomes the new value for "richestEnemy". 
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//Sets variable "richestEnemy" equal to enemy bot with most mines
+var richestEnemy = enemyBots[0];
+for (i = 0; i &lt; enemyBots.length; i++) {
+    if (richestEnemy.mineCount &lt; enemyBots[i].mineCount) {
+        richestEnemy = enemyBots[i];
+    }
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Task Selector
+            </h2>
+                <p>
+                    The next part of my code is where the bot's task is decided, based on several factors, using the data from the Global Data section of my code. 
+                </p>
+                <p class="center">
+                    <img style="max-width: 70%;" src= ../sc/globalData.png>
+                </p>
+            <table>
+                <tr>
+                    <td>
+                        <h3>
+                            Variable "task"
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            One of the first things in my task selector section of my code is defining variable "task". I do this first because when choosing a task later on, I use a variable called "task" to select the bot's actions.
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//Defining variable "task", which is what the bot is set to do
+var task; 
+
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            First task condition
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        After defining variable "task", I then had to have the bot select the task. So, I created a large if/else statement to set the bot to do specific things. The first thing in this statement is to set task to "goToTavern". This statement will only be true if my bot's health is less than 35 or if I have more mines than the richest player on the map, using the "richestEnemy" array from the global data section of the code. 
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//if statement that decides if I have less than 45 health points or more mines than the richest player on the map, then set task to "goToTavern".
+if (bot.yourBot.life &lt;= 35 || myMines > richestEnemy.mineCount) {
+    task = "goToTavern";
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            Second task condition
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            I set up this task selector as a lot of else/if statements, so, if the above statement is false, then if the "closestTarget" health is lower than my bots health minus 20, then the task is set to "attackPlayers". 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//if the statement above is not true, if the closest player with more than one mine is more than 20 health points below my player, than set task to "attackPlayers".
+else if (closestTarget.life &lt; bot.yourBot.life - 20) {
+    task = "attackPlayers";
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            Third task condition
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Since this is also an else/if statement, if the above 2 conditions is false, then if I have more mines than the richest players mines plus one, if there are still unclaimed mines, or if I do not own all the mines on the map, then the task will be set to "mines".
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//if the above 2 statements are not true, if I have less than or equal to the amount of mines the richest mines plus one or if there are more than 1 free mine available or if I don't own all the mines, then set task to "mines".
+else if (myMines &lt;= richestEnemy.mineCount + 1 || bot.freeMines > 0 || myMines !== allMines) {
+    task = "mines";
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            Fourth task condition
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Just like the other statements in this selector, the fourth condition is also an else/if statement. So, if the above 3 conditions are false and if the closest player to me if less than or equal to 6 distance away, my bot has less than 40 health, and the closest player has more health than me, then task is set to "goToFarthestTavern". 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//if the above 3 statements are not true, then if the closest enemy is less than or equal to 6 units away and my bot has less than 40 health and the closest player has more health than me, then set task to "goToFarthestTavern"
+else if (bot.findDistance(myPos, closestEnemy.posArray) &lt;= 6 && 40 > bot.yourBot.life && closestEnemy.life > bot.yourBot.life) {
+    task = "goToFarthestTavern";
+    console.log("Running!");
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            Fifth task condition
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            This condition is an else statement. The condition will be true if the above 4 conditions are false and will set task to "goToTavern". 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//if the above 4 statements are not true, then task will be set to "goToTavern"
+    else {
+        task = "goToTavern";
+        console.log("else");
+    }
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Task Execution
+            </h2>
+            <p>
+                The last part of my code is executing the tasks chosen by the task selector in the previous section of code. This is executed with a few if statements that check what variable "task" is. If variable "task" matches one of the if statements, then that if statement will run.  
+            </p>
+            <p class="center">
+                <img src= ../sc/taskExecution.png style="max-width: 100%">
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <h3>
+                            If task is "goToTavern"
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            The first statement in this section of the code will check if variable "task" was set to "goToTavern". If it is, then this block of code will run. This block of code first defines a new variable, "closeTavern", and sets it equal to the first item in the array "bot.taverns", which is an array of the positions of all the taverns on the map. Then, using a for loop, it will go through the array "bot.taverns" to check if any taverns are closer to the player than the tavern selected by "closeTavern". If there is, it will set "closeTavern" to that new closer tavern. Then, after the loop, it will then send the bot to that tavern. 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//If statement that says if task is set to "goToTavern", then go to the closest tavern to the player
+        if (task === "goToTavern") {
+            console.log("Going to tavern!");
+            var closeTavern = bot.taverns[0];
+        //For loop that will sort through the bot.taverns array and set variable closeTavern to the tavern cloeset to the player
+            for (i = 0; i &lt; bot.taverns.length; i++) {
+                if (bot.findDistance(myPos, closeTavern) > bot.findDistance(myPos, bot.taverns[i]) ) {
+                    closeTavern = bot.taverns[i];
+                    console.log("Closest tavern changed!");
+                }
+            }
+        //Sets pathfinder to go from my bot's position to the closest tavern 
+            myDir = bot.findPath(myPos, closeTavern);
+            console.log("Distance to Tavern: " + bot.findDistance(myPos, closeTavern));
+        }
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            If task is "goToFarthestTavern"
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            This statement is almost identical to the same above, except for the fact that we are trying to get the bot to the tavern furthest away from itself. So, instead of variable "closeTavern", we define a new variable called "farTavern", also set to the first item in the bot.taverns array. Also, the for loop will check if there are any taverns that are farther away, and set "farTavern" to that tavern found by the for loop.
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//If statement that says if task is set to "goToFarthestTavern", then go to the farthest tavern to the player
+if (task === "goToFarthestTavern") {
+    var farTavern = bot.taverns[0];
+//For loop that will sort through the bot.taverns array and set variable farTavern to the tavern farthest to the player
+    for (i = 0; i &lt; bot.taverns.length; i++) {
+        if (bot.findDistance(myPos, farTavern) &lt; bot.findDistance(myPos, bot.taverns[i]) ) {
+            farTavern = bot.taverns[i];
+            console.log("Farthest tavern changed!");
+        }
+    }
+//Sets pathfinder to go from my bot's position to the farthest tavern 
+    myDir = bot.findPath(myPos, farTavern);
+    console.log(farTavern);
+}
+                    </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            If task if "mines"
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        This statement, when true, will define variable "closestMine", which is set equal to the first item in the "otherMines" array. Then, it uses a for loop to check if the distance from the player to the current "closestMine" variable is farther than another mine. If it is, "closestMine" is set to this new mine. The bot is then sent on a path to this mine. 
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//if statement that says if the task is set to mines, then the bot will go to a mine to claim it
+if (task==="mines") {
+    var closestMine = otherMines[0];
+    console.log("Mining!");
+//for loop that loops through the otherMines array to find the closest mine to the player availible to claim
+    for(i = 0; i &lt; otherMines.length; i++) {
+        if (bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, otherMines[i])) {
+            closestMine = otherMines[i];
+            myDir = bot.findPath(myPos, closestMine);
+        }
+    }
+    console.log(closestMine);
+//sets pathfinder to go from original bot position to the closest mine position
+    myDir = bot.findPath(myPos, closestMine);
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <h3>
+                        <td>
+                            If task is "attackPlayers"
+                        </td>
+                    </h3>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            This if statement is extremely simple. Since we already found the "closestTarget" variable in the Global Data section of the code, this statement sets my bot to go towards the posiiton of the player selected in the "closestTarget" variable. 
+                        </p>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>//if statement that says if task is set to attackPlayers, then my bot will go to the closest player that has more than one mine and attack
+if(task === "attackPlayers") {
+    console.log("Attack code working");
+    console.log("Enemy Position:" + "[" + closestTarget.posArray + "] " + "Enemy Health: " + closestTarget.life + " Enemy ID: " + closestTarget.id + " Enemy Distance:" + bot.findDistance(myPos, closestTarget.posArray) );
+//sets pathfinder from my original position to the closest enemy who owns more than one mine posiiton            
+    myDir = bot.findPath(myPos, closestTarget.posArray);
+}
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
