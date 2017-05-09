@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 900;
+    height: 100%;
+}
+
+.title {
+    text-align: right;
+}
+
+.title * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title img {
+    width: 100px;
+}
+
+.title  {
+    vertical-align: middle;
+    margin: 0px;
+}
+
+#sidebar {
+    display: none;
+    height: 100%;
+    border-right: 1px solid white;
+    position: fixed;
+}
+
+#sidebar h2:hover {
+    padding: 10px;
+    color: black;
+    background-color: white;
+}
+
+#sideButton {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 30px;
+}
+
+.albumArt img {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: white;
+}
+
+.playButtons * {
+    vertical-align: middle;
+}
+
+.playButtons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.allThreeArt {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.leftArtParent, .rightArtParent {
+    display: inline-block;
+    width: 33%;
+}
+
+.leftArtChild img, .rightArtChild img {
+    width: 200px;
+    filter: brightness(0.5);
+    -webkit-transition : -webkit-filter 500ms linear;
+    transition: all .500ms ease-in-out; 
+}
+
+.leftArtParent:hover img, .rightArtParent:hover img{
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+
+.allThreeArt * {
+    vertical-align: middle;
+}
+
+.albumArt {
+    display: inline-block;
+    border: 3px solid white;
+}
+
+.leftArtParent, .rightArtParent {
+    -webkit-perspective: 150px;
+}
+
+.leftArtChild {
+    -webkit-transform: rotateY(-10deg);
+}
+
+.rightArtChild {
+    -webkit-transform: rotateY(10deg);
+}
+
+.timelineWrapper {
+    height: 20px;
+}
+
+#timeline {
+    width: 407px;
+    height: 20px;
+    background-color: #6898E0;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+
+#playhead {
+    margin-left:0px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    
+}
+
+.info * {
+    text-align: center;
+}
+
+.title * {
+    margin: 10px;
+}
+
+.title {
+    width: 100%;
+    
+}
+
+.artist {
+    width: 100%;
+}
+
+.artist * {
+    margin: 10px;
+}
+
+.albumName * {
+    margin: 0px;
+}
+
+
+.playButtons img {
+    background: none;
+}
+
+.playButtons button {
+    border: none; 
+    background: none;
+}
+
+.playButtons {
+    border: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+}
+
+#playImage {
+    width: 80px;
+}
+
+
+.BackAndNext {
+    width: 60px;
+}
+
+.ShuffleAndLoop {
+    width: 40px;
+}
+
+#backButton:active img, #nextButton:active, img #play:active img{
+    filter: invert(100%); border: 2px solid black; border-radius: 50%; width: 56px
+}
+
+.animate-left{
+    position:relative;
+    animation:animateleft 0.1s
+}
+@keyframes animateleft{
+    from{left:-25%;opacity:0} 
+    to{left:0;opacity:1}
+}
+
+.animate-right {
+    position: relative;
+    animation: animateright 0.1s;
+}
+
+@keyframes animateright {
+    from{
+        left:0;
+        opacity:1
+    }
+    to{
+        left: -25%;
+        opacity: 0;
+    }
+    
+}

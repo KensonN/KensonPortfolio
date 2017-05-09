@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Kenson's Music Player
+        </title>
+    <link rel="stylesheet" href="player.css" type="text/css" />
+    </head>
+    <body>
+        <div id="sidebar" style="float: left;" class=" animate-left">
+            <button style="float: right" class="playButtons" id="close">
+                X
+            </button>
+            <h1 style="border-bottom: 2px solid white; padding-bottom: 10px">
+                Songs
+            </h1>
+            <div id="songList">
+            </div>
+        </div>
+        <div id="option">
+            
+        </div>
+        <div id="main">
+            <div class="title">    
+                <button id='sideButton' style="float: left">
+                    &#9776;
+                </button>
+                <tr>
+                    <td>    
+                        <h1>
+                            Kenson's Music Player
+                        </h1>
+                    </td>
+                    <td>
+                        <img src="icon.png">
+                    </td>
+               </tr>
+            </div>
+            <div class="allThreeArt">
+                    <div class="leftArtParent">
+                        <div class="leftArtChild">
+                            <img id = "previousArt" src="placeholder.jpg">
+                        </div>
+                    </div>
+                    <div class="albumArt">
+                        <!--
+                        <button id="addArt">
+                            Add
+                        </button>
+                        -->
+                        <img id ="currentArt" src="placeholder.jpg">
+                    </div>
+                    <div class="rightArtParent">
+                        <div class="rightArtChild">
+                            <img id = "nextArt" src="placeholder.jpg">
+                        </div>
+                    </div>
+                </div>
+            <div class="timelineWrapper">
+                <div id="timeline"> <!--Timeline -->
+                <div id="playhead"></div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="title">
+                    <h1 id = "title">
+                        Select Song to Continue
+                    </h1>
+                </div>
+                <div class="albumName">
+                    <h4 id = "albumName">
+                        Select Song to Continue
+                    </h4>
+                </div>
+                <div class="artist">
+                    <h2 id = "artist">
+                        Select Song to Continue
+                    </h2>
+                </div>
+            </div>
+            <div class="playButtons">
+                <!--
+                <button id="shuffleButton">
+                    <img src="icons/shuffle.png" class="ShuffleAndLoop" id="shuffleImage">
+                </button>
+                -->
+                <button id="backButton">
+                    <img src="icons/back.png" class="BackAndNext" id="backImage">
+                </button>
+                <button id="play">
+                    <img id="playImage" src="icons/play.png">
+                </button>
+                <button id="nextButton">
+                    <img src="icons/next.png" class="BackAndNext" id="nextImage">
+                </button>
+                <!--
+                <button id="loopButton">
+                    <img src="icons/loop.png" class="ShuffleAndLoop" id="loopImage">
+                </button>
+                -->
+            </div>
+        </div>
+        <div id=info></div>
+        <audio loop="true" id="audio" src="place holder.mp3" type="mp3/mpeg">
+        </audio>
+        <script type="text/javascript" src="musicPlayer.js"></script>
+    </body>
+</html>
