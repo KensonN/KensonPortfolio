@@ -60,9 +60,164 @@ var language = {
     art: "music/music/Language/language.jpg"
 }
 
+var laLune = {
+    source: "music/music/Adventure/04 La Lune (feat. Dan Smith).mp3",
+    title : "La Lune",
+    artist: "Madeon (ft. Dan Smith)",
+    album: "Adventure",
+    art: "music/music/Adventure/adventure.jpg"
+}
+var pixelEmpire = {
+    source: "music/music/Adventure/11 Pixel Empire.mp3",
+    title: "Pixel Empire",
+    artist: "Madeon",
+    album: "Adventure",
+    art: "music/music/Adventure/adventure.jpg"
+}
+var youreOn = {
+    source: "music/music/Adventure/02 You're On (feat. Kyan).mp3",
+    title: "You're On",
+    artist: "Madeon (ft. Kyan)",
+    album: "Adventure",
+    art: "music/music/Adventure/adventure.jpg"
+}
+var theCity = {
+    source: "music/music/Adventure/15 The City.mp3",
+    title: "The City",
+    artist: "Madeon",
+    album: "Adventure",
+    art: "music/music/Adventure/adventure.jpg"
+}
+var spectrum = {
+    source: "music/music/Clarity/03 Spectrum (feat. Matthew Koma).mp3",
+    title: "Spectrum",
+    artist: "Zedd",
+    album: "Clarity",
+    art: "music/music/Clarity/clarity.png"
+}
+var lostAtSea = {
+    source: "music/music/Clarity/04 Lost At Sea (feat. Ryan Tedder).mp3",
+    title: "Lost at Sea",
+    artist: "Zedd",
+    album: "Clarity",
+    art: "music/music/Clarity/clarity.png"
+}
+var illusion = {
+    source: "music/music/True Colors/11 Illusion (feat. Echosmith).mp3",
+    title: "Illusion",
+    artist: "Zedd (ft. Echosmith)",
+    album: "True Colors",
+    art: "music/music/True Colors/true colors.jpg"
+}
+var papercut = {
+    source: "music/music/True Colors/08 Papercut (feat. Troye Sivan).mp3",
+    title: "Papercut",
+    artist: "Zedd (ft. Troye Sivan)",
+    album: "True Colors",
+    art: "music/music/True Colors/true colors.jpg"
+}
 
-var songList = [clarity,divinity,doneWithLove,home,language,shelter]
-var currentSong
+var beautifulNow = {
+    source: "music/music/True Colors/03 Beautiful Now (feat. Jon Bellion).mp3",
+    title: "Beautiful Now",
+    artist: "Zedd (ft. Jon Bellion)",
+    album: "True Colors",
+    art: "music/music/True Colors/true colors.jpg"
+}
+var sadMachine = {
+    source: "music/music/Worlds/02_Sad_Machine.mp3",
+    title: "Sad Machine",
+    artist: "Porter Robinson",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg"
+}
+var flicker = {
+    source: "music/music/Worlds/04 Flicker.mp3",
+    title: "Flicker",
+    artist: "Porter Robinson",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg"
+}
+var hearTheBells = {
+    source: "music/music/Worlds/07 Hear the Bells (feat. Imaginary C.mp3",
+    title: "Hear the Bells",
+    artist: "Porter Robinson (ft. Imaginary Cities)",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg"
+}
+var naturalLight = {
+    source: "music/music/Worlds/08 Natural Light.mp3",
+    title: "Natural Light",
+    artist: "Porter Robinson",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg"    
+}
+var seaOfVoices = {
+    source: "music/music/Worlds/10 Sea of Voices.mp3",
+    title: "Sea of Voices",
+    artist: "Porter Robinson",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg"    
+}
+var fellowFeeling = {
+    source: "music/music/Worlds/11 Fellow Feeling.mp3",
+    title: "Fellow Feeling",
+    artist: "Porter Robinson",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg" 
+}
+var goodbyeToAWorld = {
+    source: "music/music/Worlds/12 Goodbye To a World.mp3",
+    title: "Goodbye to a World",
+    artist: "Porter Robinson",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg" 
+}
+var ffs = {
+    source: "music/music/Worlds/05 Fresh Static Snow.mp3",
+    title: "Fresh Static Snow",
+    artist: "Porter Robinson",
+    album: "Worlds",
+    art: "music/music/Worlds/worlds.jpg" 
+}
+var laLuneLive = {
+    source: "music/music/Shelter Live/La Lune x Sea Of Voices (Shelter Edit).mp3",
+    title: "La Lune x Sea of Voices (Shelter Live Edit)",
+    artist: "Porter Robinson & Madeon",
+    album: "Shelter Live",
+    art: "music/music/Shelter Live/shelterlive.jpg"
+}
+var ffsLive = {
+    source: "music/music/Shelter Live/Fresh Static Snow (Shelter Edit).mp3",
+    title: "Fresh Static Snow (Shelter Live Edit)",
+    artist: "Porter Robinson & Madeon",
+    album: "Shelter Live",
+    art: "music/music/Shelter Live/shelterlive.jpg"
+}
+var easy = {
+    source: "music/music/Easy/01 Easy (Extended Remix).mp3",
+    title: "Easy (Extended Remix)",
+    artist: "Porter Robinson and Mat Zo",
+    album: "Easy (Single)",
+    art: "music/music/Easy/easy.jpg"
+}
+var raiseYourWeapon = {
+    source: "music/music/Raise Your Weapon/01 Raise Your Weapon.m4a",
+    title: "Raise Your Weapon",
+    artist: "DeadMau5",
+    album: "Raise Your Weapon (Single)",
+    art: "music/music/Raise Your Weapon/Raise_Your_Weapon.png"
+}
+var theVeldt = {
+    source: "music/music/The Veldt/01 The Veldt (feat. Chris James) [Or (1).mp3",
+    title: "The Veldt",
+    artist: "DeadMau5 (ft. Chris James)",
+    album: "The Veldt (Single)",
+    art:"music/music/The Veldt/veldt.jpg"
+}
+var songList = [beautifulNow,clarity,divinity,doneWithLove,easy,fellowFeeling,ffs,ffsLive,flicker,goodbyeToAWorld,hearTheBells,home,illusion,laLune,laLuneLive,language,lostAtSea,naturalLight,papercut,pixelEmpire,raiseYourWeapon,sadMachine,seaOfVoices,shelter,spectrum,theCity,theVeldt,youreOn]
+var currentSong;
+var songAmount = songList.length-1
 
 function songChosen() {
     for (i=0; i < songList.length; i++) {
@@ -82,9 +237,9 @@ function songChosen() {
                 document.getElementById("previousArt").src = songList[i - 1].art
             }
             else {
-                document.getElementById("previousArt").src = songList[5].art
+                document.getElementById("previousArt").src = songList[songAmount].art
             }
-            if (i != 5) {
+            if (i != songAmount) {
                 document.getElementById("nextArt").src = songList[i + 1].art
             }
             else {
@@ -99,7 +254,7 @@ document.getElementById('nextArt').addEventListener("click", next)
 function next () {
    for (i=0; i < songList.length; i++) {
         if (currentSong === songList[i].title){
-            if (i<4) {    
+            if (i<songAmount-1) {    
                 currentSong = songList[i+1].title;
                 audio.src = songList[i+1].source;
                 audio.load();
@@ -112,7 +267,7 @@ function next () {
                 playImage.setAttribute('src', "icons/play.png")
                 break;
             }
-            else if (i === 4) {
+            else if (i === songAmount-1) {
                 currentSong = songList[i+1].title;                
                 audio.src = songList[i+1].source
                 audio.load()
@@ -135,7 +290,7 @@ function next () {
                 document.getElementById("albumName").innerHTML = songList[0].album;
                 document.getElementById("currentArt").src = songList[0].art;
                 document.getElementById("nextArt").src = songList[1].art;
-                document.getElementById("previousArt").src = songList[5].art;
+                document.getElementById("previousArt").src = songList[songAmount].art;
                 playImage.setAttribute('src', "icons/play.png")
             }
         }
@@ -165,26 +320,25 @@ function previous(){
                 currentSong = songList[i-1].title;
                 audio.src = songList[i-1].source;
                 audio.load();
-                
                 document.getElementById("title").innerHTML = songList[i-1].title;
                 document.getElementById("artist").innerHTML= songList[i-1].artist;
                 document.getElementById("albumName").innerHTML = songList[i-1].album;
                 document.getElementById("currentArt").src = songList[i-1].art;
                 document.getElementById("nextArt").src = songList[i].art;
-                document.getElementById("previousArt").src = songList[5].art;
+                document.getElementById("previousArt").src = songList[songAmount].art;
                 playImage.setAttribute('src', "icons/play.png")
                 break;
             }
             if (i === 0) {
-                currentSong = songList[5].title;
-                audio.src = songList[5].source;
+                currentSong = songList[songAmount].title;
+                audio.src = songList[songAmount].source;
                 audio.load();
                 
-                document.getElementById("title").innerHTML = songList[5].title;
-                document.getElementById("artist").innerHTML= songList[5].artist;
-                document.getElementById("albumName").innerHTML = songList[5].album;
-                document.getElementById("currentArt").src = songList[5].art;
-                document.getElementById("nextArt").src = songList[4].art;
+                document.getElementById("title").innerHTML = songList[songAmount].title;
+                document.getElementById("artist").innerHTML= songList[songAmount].artist;
+                document.getElementById("albumName").innerHTML = songList[songAmount].album;
+                document.getElementById("currentArt").src = songList[songAmount].art;
+                document.getElementById("nextArt").src = songList[songAmount-1].art;
                 document.getElementById("previousArt").src = songList[0].art;
                 playImage.setAttribute('src', "icons/play.png")
                 break;
@@ -248,42 +402,7 @@ function sidebarOpen() {
     document.getElementById("sidebar").style.width = "25%";
     document.getElementById("sidebar").style.display = "block";
 }
-/*
-shuffleButton.addEventListener("click", changeShuffleButton);
 
-function changeShuffleButton() {
-    console.log("shufflepress");
-    if (shuffleImage.getAttribute('style') === "filter: invert(100%); border: 2px solid black; border-radius: 50%; width: 36px") {
-        shuffleImage.setAttribute('style', 'filter:(0%)');
-        console.log("noinvert");
-    }
-    else {
-        shuffleImage.setAttribute('style', "filter: invert(100%); border: 2px solid black; border-radius: 50%; width: 36px");
-        console.log("invert");
-    }
-}
-
-loopButton.addEventListener("click", changeLoopButton);
-
-function changeLoopButton() {
-    console.log("loop pressed");
-    if (loopImage.getAttribute('src') === "icons/loop1.png"){
-        loopImage.setAttribute('style', "filter: invert(0%)");
-        loopImage.setAttribute('src', "icons/loop.png");
-        alert("off")
-        audio.loop = false
-    }
-    else if (loopImage.getAttribute('style') === "filter: invert(100%); border: 2px solid black; border-radius: 50%; width: 36px") {
-        loopImage.setAttribute('src', "icons/loop1.png");
-        console.log("single");
-        audio.loop = true
-        alert("single")
-    }
-    else if (loopImage.getAttribute('src') === "icons/loop.png") {
-    loopImage.setAttribute('style', 'filter: invert(100%); border: 2px solid black; border-radius: 50%; width: 36px');
-    }
-}
-*/
 var audioDuration = audio.duration
 
 audio.addEventListener("canplaythrough", function () {
@@ -308,3 +427,4 @@ document.getElementById("timeline").addEventListener("click", function () {
     
 })
 
+audio.loop();
