@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music Player How-To</title>
+        <link rel="stylesheet" href="../CSS/Styles.css" type="text/css" />
+    </head>
+    <body class="howto">
+        <div class="navbar">    
+            <ul class="navbar">
+                <li>
+                    <a href="../Home/index.html?v=1.01">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="../About/about.html?v=1.01">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="../ReDirect/hardware.html?v=1.01">
+                        Hardware
+                    </a>
+                </li>
+                <li>
+                    <a href="../Calculator/calculator.html?v=1.01">
+                        Calculator
+                    </a>
+                </li>
+                <li>
+                    <a href="../ToDo/ToDo.html?v=1.01">
+                        Todo List
+                    </a>
+                </li>
+                <li>
+                    <a href="../Vindinium/Vindinium.html?v=1.01">
+                        Vindinium
+                    </a>
+                </li>
+                <li>
+                    <a href="../Music Player/musicPlayer.html">
+                        Music Player
+                    </a>
+                </li>
+                <li>
+                    <a href="../ReDirect/howto.html?v=1.01">
+                        How-To
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="text">
+            <h1>
+                What this is
+            </h1>
+            <p>
+                This page will be detailing how one of the most crucial parts of the music player, the play button, worked.
+            </p>
+            <h2>
+                HTML
+            </h2>
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                The HTML for the HTML play button is extremely self explanatory. To do it, I used a button tag, with the id "play", to be referenced later in the JavaScript. I set the button to use the image "play.png", since this makes the button look like a play button. I also set the image to the id "playImage", to set the width of the image.
+                            </p>
+                        </td>
+                        <td>
+                            <code>
+                                <pre>//Play Button<br/>&lt;button id=&quot;play&quot;&gt;<br/>    &lt;img id=&quot;playImage&quot; src=&quot;icons/play.png&quot;&gt;<br/>&lt;/button&gt;
+                                </pre>
+                            </code>
+                        </td>
+                    </tr>
+                </table>    
+                <h2>
+                    The CSS
+                </h2>
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                The CSS for the button is also extremely simple. Since HTML buttons, by default, have a border and background color, I needed to remove this to CSS. The play button is inside a div with the class "playButtons", so I set all buttons inside this div to have no background and border. Also, to set the width 
+                            </p>
+                        </td>
+                        <td>
+                            <code>
+                                <pre>//Sets background and border to 0<br/>.playButtons button {<br/>    border: none; <br/>    background: none;<br/>}<br/>//Sets image to 80px wide<br/>#playImage {<br/>    width: 80px;<br/>}
+                                </pre>
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+                <h2>
+                    The JavaScript
+                </h2>
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                The JavaScript is where the play button gets its functionality. 
+                            </p>                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                First, I created a variable, called playButton, which would fetch the element with the id of "play" from our HTML. 
+                            </p>
+                        </td>
+                        <td>
+                            <code>
+                                <pre>//Fetches play button from HTML<br/>var playButton = document.getElementById(&quot;play&quot;);<br/>
+                                </pre>
+                            </code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Then, I created an event listener, which would detect that if playButton is clicked, then run a function called playAudio.
+                            </p>
+                        </td>
+                        <td>
+                            <code>
+                                <pre>//Event listener to detect when play button is pressed<br/>playButton.addEventListener(&quot;click&quot;, playAudio);<br/></pre>
+                            </code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Lastly, I created the function playAudio. This function contains a simple if else statement. The function checks that if audio.paused, which means the audio is paused, then audio.play(), which makes the audio play. Also, change the image to the pause icon. Otherwise, pause the audio with audio.pause() and change the icon to a play button.
+                            </p>
+                        </td>
+                        <td>
+                            <code>
+                                <pre>function playAudio() {<br/>    //if audio is paused<br/>    if (audio.paused) {<br/>    //play audio        <br/>            audio.play();<br/>    //change icon to pause        <br/>        playImage.setAttribute('src', &quot;icons/pause.png&quot;)<br/>        }<br/>    else {<br/>    //pause audio        <br/>        audio.pause();<br/>    //change icon to play        <br/>        playImage.setAttribute('src', &quot;icons/play.png&quot;)<br/>        }<br/>}<br/></pre>
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>

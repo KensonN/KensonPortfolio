@@ -227,15 +227,19 @@ function closeSidebar() {
 playButton.addEventListener("click", playAudio);
 
 function playAudio() {
-    console.log("playing")
+    //if audio is paused
     if (audio.paused) {
-        audio.play();
+    //play audio        
+            audio.play();
+    //change icon to pause        
         playImage.setAttribute('src', "icons/pause.png")
-    }
+        }
     else {
+    //pause audio        
         audio.pause();
+    //change icon to play        
         playImage.setAttribute('src', "icons/play.png")
-    }
+        }
 }
 
 function sidebarOpen() {
