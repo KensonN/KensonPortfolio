@@ -370,11 +370,18 @@ for (i = 0; i < songList.length; i++) {
 
 
 sideButton.addEventListener("click", showSidebar);
+var side = 0
 
 function showSidebar() {
-    document.getElementById("main").style.marginLeft = "20%";
-    document.getElementById("sidebar").style.width = "20%";
-    document.getElementById("sidebar").style.display = "block";
+    side++;
+    if (side%2===1) {
+        document.getElementById("main").style.marginLeft = "20%";
+        document.getElementById("sidebar").style.width = "20%";
+        document.getElementById("sidebar").style.display = "block";
+    }
+    else {
+        closeSidebar()
+    }
 }
 
 close.addEventListener("click", closeSidebar);
