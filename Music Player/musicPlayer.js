@@ -215,7 +215,14 @@ var theVeldt = {
     album: "The Veldt (Single)",
     art:"music/music/The Veldt/veldt.jpg"
 }
-var songList = [beautifulNow,clarity,divinity,doneWithLove,easy,fellowFeeling,ffs,ffsLive,flicker,goodbyeToAWorld,hearTheBells,home,illusion,laLune,laLuneLive,language,lostAtSea,naturalLight,papercut,pixelEmpire,raiseYourWeapon,sadMachine,seaOfVoices,shelter,spectrum,theCity,theVeldt,youreOn]
+var OSTTT = {
+    source: "music/music/OSTTT/OSTTT.wav",
+    title:"OSTTT",
+    artist: "Porter Robinson & Madeon",
+    album: "UNRELEASED",
+    art:"music/music/OSTTT/OSTTT.jpg"
+}
+var songList = [beautifulNow,clarity,divinity,doneWithLove,easy,fellowFeeling,ffs,ffsLive,flicker,goodbyeToAWorld,hearTheBells,home,illusion,laLune,laLuneLive,language,lostAtSea,naturalLight,OSTTT,papercut,pixelEmpire,raiseYourWeapon,sadMachine,seaOfVoices,shelter,spectrum,theCity,theVeldt,youreOn]
 var currentSong;
 var songAmount = songList.length-1
 
@@ -411,7 +418,7 @@ audio.addEventListener("canplaythrough", function () {
 
 audio.addEventListener("timeupdate", timeUpdate, false);
 function timeUpdate() {
-    playPercent = -10 + 402 * (audio.currentTime / audioDuration);
+    playPercent = 402 * (audio.currentTime / audioDuration) - 10;
     // playhead.setAttribute("style", "left-margin: 100px");
     playhead.style.marginLeft = playPercent + "px";
     if (audio.currentTime == audioDuration) {

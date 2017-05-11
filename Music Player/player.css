@@ -93,7 +93,7 @@ body {
 }
 
 .leftArtChild img, .rightArtChild img {
-    width: 200px;
+    width: 250px;
     filter: brightness(0.5);
     -webkit-transition : -webkit-filter 500ms linear;
     transition: all .500ms ease-in-out; 
@@ -114,15 +114,15 @@ body {
 }
 
 .leftArtParent, .rightArtParent {
-    -webkit-perspective: 150px;
+    -webkit-perspective: 1000px;
 }
 
 .leftArtChild {
-    -webkit-transform: rotateY(-10deg);
+    -webkit-transform: rotateY(-30deg);
 }
 
 .rightArtChild {
-    -webkit-transform: rotateY(10deg);
+    -webkit-transform: rotateY(30deg);
 }
 
 .timelineWrapper {
