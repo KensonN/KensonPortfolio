@@ -18,12 +18,19 @@
     margin-left:0%;
 }
 
+#sideButton{
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+
 body {
     background-color: black;
     color: white;
     font-family: 'Roboto';
     font-weight: 900;
     height: 100%;
+    overflow: hidden;
 }
 
 .title {
