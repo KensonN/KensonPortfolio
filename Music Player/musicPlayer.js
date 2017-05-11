@@ -1,3 +1,5 @@
+document.body.style.zoom = 1
+
 var i
 var playButton = document.getElementById("play");
 var playImage = document.getElementById("playImage");
@@ -254,21 +256,6 @@ function songChosen() {
             }
         }
     }
-}
-
-document.onkeydown = checkKey;
-
-function checkKey(e) {
-
-    e = e || window.event;
-
-    if (e.keyCode == '37') {
-        previous()
-    }
-    else if (e.keyCode == '39') {
-        next()
-    }
-
 }
 
 document.getElementById('nextButton').addEventListener("click", next)
