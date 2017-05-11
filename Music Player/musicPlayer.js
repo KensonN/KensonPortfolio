@@ -256,6 +256,21 @@ function songChosen() {
     }
 }
 
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+        previous()
+    }
+    else if (e.keyCode == '39') {
+        next()
+    }
+
+}
+
 document.getElementById('nextButton').addEventListener("click", next)
 document.getElementById('nextArt').addEventListener("click", next)
 function next () {
@@ -390,6 +405,12 @@ function closeSidebar() {
     document.getElementById("main").style.marginLeft = "0%";
     document.getElementById("sidebar").style.width = "20%";
     document.getElementById("sidebar").style.display = "none";
+}
+
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        playAudio();
+    }
 }
 
 playButton.addEventListener("click", playAudio);
