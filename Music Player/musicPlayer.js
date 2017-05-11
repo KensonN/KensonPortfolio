@@ -381,8 +381,12 @@ for (i = 0; i < songList.length; i++) {
 
 }
 
-
-
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        closeSidebar();
+    }
+};
 
 sideButton.addEventListener("click", showSidebar);
 var side = 0
@@ -462,4 +466,3 @@ document.getElementById("timeline").addEventListener("click", function () {
     
 })
 
-audio.loop();
